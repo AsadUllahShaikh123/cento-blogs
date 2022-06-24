@@ -1,9 +1,11 @@
-import { Button } from '@mui/material'
 import React from 'react'
+import Footer from './pages/footer/Footer'
 
 const App = () => {
   return (
-    <Button>Hello from Button</Button>
+    <>
+      <Footer/>
+    </>
   )
 }
 
