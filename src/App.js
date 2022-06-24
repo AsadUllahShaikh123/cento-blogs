@@ -1,10 +1,12 @@
 import React from 'react'
-import Footer from './pages/footer/Footer'
+// import Footer from './components/footer/Footer'
+import Contact from './pages/contact/Contact'
 
 const App = () => {
   return (
     <>
-      <Footer/>
+    <Contact/>
+      {/* <Footer/> */}
     </>
   )
 }
