@@ -18,6 +18,10 @@ label {
 .form  input 
 {
   padding: 0.5rem;
-  border-radius: 8px;
+  border-radius: 6px;
   margin-bottom: 1rem;
+}
+.w-48
+{
+  width:'48%'
 }
