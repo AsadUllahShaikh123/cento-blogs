@@ -21,7 +21,53 @@ label {
   border-radius: 6px;
   margin-bottom: 1rem;
 }
-.w-48
+.links p:hover 
 {
-  width:'48%'
+  cursor: pointer;
+}
+.links p 
+{
+  font-weight: 700;
+  color:#718096
+}
+
+.fg--search {
+  
+  position: relative;
+  
+}
+
+
+.fg--search button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+  z-index: 2;
+}
+.toggle-button button 
+{
+  width:50px;
+  height: 24px;
+  border-radius: 20px;
+}
+.circle
+{
+  width:21px;
+  height: 21px;
+  background-color: white;
+  border: 2px solid black;
+}
+.toggle-button .light
+{
+  background: linear-gradient(45deg,#FF7D6B,#FFD64C);
+}
+.toggle-button .dark
+{
+  background: linear-gradient(45deg,#3366FF,#AC15B8);
 }
