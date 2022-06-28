@@ -1,43 +1,5 @@
 
-import image1 from '../public/images/case_studies/broadcaster.webp'
-import image2 from '../public/images/case_studies/charity.webp'
-import image3 from '../public/images/case_studies/shopping.webp'
-import image4 from '../public/images/case_studies/super_market.webp'
-import image5 from '../public/images/case_studies/trigger_emails.webp'
-import image6 from '../public/images/case_studies/university.webp'
-import image7 from '../public/images/case_studies/web_design.webp'
-import image8 from '../public/images/case_studies/branding_agency.webp'
-import image9 from '../public/images/case_studies/consultancy.webp'
-import image10 from '../public/images/case_studies/seo.webp'
-import image11 from '../public/images/innovation/innovations.webp'
-import image12 from '../public/images/innovation/innovation_strategy.webp'
-import image13 from '../public/images/innovation/business_model.webp'
-import image14 from '../public/images/innovation/designer_sustainably.webp'
-import image15 from '../public/images/innovation/create_team.webp'
-import image16 from '../public/images/innovation/assess_company.webp'
-import image17 from '../public/images/innovation/self_steering.webp'
-import image18 from '../public/images/innovation/innovation_strategy.webp'
-import image19 from '../public/images/innovation/future_proof.webp'
-import image20 from '../public/images/management/easy_ways.webp'
-import image21 from '../public/images/management/leadership.webp'
-import image22 from '../public/images/management/business.webp'
-import image23 from '../public/images/management/technology.webp'
-import image24 from '../public/images/management/digital_disruptors.webp'
-import image25 from '../public/images/management/skill.webp'
-import image26 from '../public/images/management/time_energy.webp'
-import image27 from '../public/images/management/operations.webp'
-import image28 from '../public/images/management/challenges.webp'
-import image29 from '../public/images/advertising/markdown.webp'
-import image30 from '../public/images/advertising/cookie.webp'
-import image31 from '../public/images/advertising/guide.webp'
-import image32 from '../public/images/advertising/unlock_power.webp'
-import image33 from '../public/images/advertising/digital_marketing.webp'
-import image34 from '../public/images/advertising/debate.webp'
-import image35 from '../public/images/advertising/advertising.webp'
-import image36 from '../public/images/advertising/native_advertising.webp'
-import image37 from '../public/images/advertising/programmatic_outdoor.webp'
-import image38 from '../public/images/advertising/social_media.webp'
-import image39 from '../public/images/advertising/reactive_marketing.webp'
+
 
 let data =[
   {
@@ -48,7 +10,7 @@ let data =[
         author:'Steve Grant',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image1,
+        image:'/images/case_studies/broadcaster.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -58,7 +20,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image2,
+        image:'/images/case_studies/charity.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -68,7 +30,7 @@ let data =[
         author:'Jane Smith',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image3,
+        image:'/images/case_studies/shopping.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -78,7 +40,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image4,
+        image:'/images/case_studies/super_market.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -88,7 +50,7 @@ let data =[
         author:'John Doe',
         date :'April 16, 2020',
         read:'1 min read',
-        image:image5,
+        image:'/images/case_studies/trigger_emails.webp',
         tags:['#agency','business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -98,7 +60,7 @@ let data =[
         author:'Steve Grant',
         date:'April 16, 2020',
         read:'1 min read',
-        image: image6,
+        image: '/images/case_studies/university.webp',
         tags:['#agency','business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -108,7 +70,7 @@ let data =[
         author:'Jane Smith',
         date:'April 16, 2020',
         read:'1 min read',
-        image: image7,
+        image: '/images/case_studies/web_design.webp',
         tags:['#agency','business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -118,7 +80,7 @@ let data =[
         author:'Jane Smith',
         date:'April 16, 2020',
         read:'1 min read',
-        image: image8,
+        image: '/images/case_studies/branding_agency.webp',
         tags:['#agency','business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -128,7 +90,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image: image9,
+        image: '/images/case_studies/consultancy.webp',
         tags:['#agency','business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -138,7 +100,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image: image10,
+        image: '/images/case_studies/seo.webp',
         tags:['#agency','business','#technology'],
         icons:['f','t','in','e-mail']
       }
@@ -150,7 +112,7 @@ let data =[
         author:'John Doe',
         date:'April 02, 2020',
         read:'1 min read',
-        image: image11,
+        image: '/images/innovation/innovations.webp',
         tags:['business','#innovation'],
         icons:['f','t','in','e-mail']
       },
@@ -160,7 +122,7 @@ let data =[
         author:'John Doe',
         date:'April 02, 2020',
         read:'1 min read',
-        image: image12,
+        image: '/images/innovation/innovation_strategy.webp',
         tags:['business','#innovation'],
         icons:['f','t','in','e-mail']
       },
@@ -170,7 +132,7 @@ let data =[
         author:'John Doe',
         date:'April 02, 2020',
         read:'1 min read',
-        image: image13,
+        image: '/images/innovation/business_model.webp',
         tags:['business','#innovation'],
         icons:['f','t','in','e-mail']
       },
@@ -180,7 +142,7 @@ let data =[
         author:'John Doe',
         date:'April 02, 2020',
         read:'1 min read',
-        image: image14,
+        image: '/images/innovation/designer_sustainably.webp',
         tags:['business','#innovation'],
         icons:['f','t','in','e-mail']
       },
@@ -190,7 +152,7 @@ let data =[
         author:'John Doe',
         date:'April 02, 2020',
         read:'1 min read',
-        image: image15,
+        image: '/images/innovation/create_team.webp',
         tags:['business','#innovation'],
         icons:['f','t','in','e-mail']
       },
@@ -200,7 +162,7 @@ let data =[
         author:'John Doe',
         date:'April 02, 2020',
         read:'1 min read',
-        image: image16,
+        image: '/images/innovation/assess_company.webp',
         tags:['#business','#innovation'],
         icons:['f','t','in','e-mail']
       },
@@ -210,7 +172,7 @@ let data =[
         author:'John Doe',
         date:'April 02, 2020',
         read:'1 min read',
-        image:image17,
+        image:'/images/innovation/self_steering.webp',
         tags:['#business','#innovation'],
         icons:['f','t','in','e-mail']
       },
@@ -220,7 +182,7 @@ let data =[
         author:'John Doe',
         date:'April 02, 2020',
         read:'1 min read',
-        image:image18,
+        image:'/images/innovation/innovation_strategy.webp',
         tags:['#business','#innovation'],
         icons:['f','t','in','e-mail']
       },
@@ -230,7 +192,7 @@ let data =[
         author:'John Doe',
         date:'April 02, 2020',
         read:'1 min read',
-        image:image19,
+        image:'/images/innovation/future_proof.webp',
         tags:['#business','#innovatoin'],
         icons:['f','t','in','e-mail']
       }
@@ -242,7 +204,7 @@ let data =[
         author:'Steve Grant',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image20,
+        image:'/images/management/easy_ways.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -252,7 +214,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image21,
+        image:'/images/management/leadership.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -262,7 +224,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image22,
+        image:'/images/management/business.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -272,7 +234,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image23,
+        image:'/images/management/technology.webp',
         tags:['#agency','business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -282,7 +244,7 @@ let data =[
         author:'Steve Grant',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image24,
+        image:'/images/management/digital_disruptors.webp',
         tags:['#agency','business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -292,7 +254,7 @@ let data =[
         author:'Steve Grant',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image25,
+        image:'/images/management/skill.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -302,7 +264,7 @@ let data =[
         author:'Steve Grant',
         date:'April 16, 2020',
         read:'1 min read',
-        image: image26,
+        image: '/images/management/time_energy.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -312,7 +274,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image27,
+        image:'/images/management/operations.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -322,7 +284,7 @@ let data =[
         author:'Jane Smith',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image28,
+        image:'/images/management/challenges.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       }
@@ -334,7 +296,7 @@ let data =[
         author:'Jane Smith',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image29,
+        image:'/images/advertising/markdown.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -344,7 +306,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image30,
+        image:'/images/advertising/cookie.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -354,7 +316,7 @@ let data =[
         author:'Steve Grant',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image31,
+        image:'/images/advertising/guide.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -364,7 +326,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image32,
+        image:'/images/advertising/unlock_power.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -374,7 +336,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image33,
+        image:'/images/advertising/digital_marketing.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -384,7 +346,7 @@ let data =[
         author:'Steve Grant',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image34,
+        image:'/images/advertising/debate.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -394,7 +356,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image35,
+        image:'/images/advertising/advertising.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -404,7 +366,7 @@ let data =[
         author:'Steve Grant',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image36,
+        image:'/images/advertising/native_advertising.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -414,7 +376,7 @@ let data =[
         author:'Steve Grant',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image37,
+        image:'/images/advertising/programmatic_outdoor.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -424,7 +386,7 @@ let data =[
         author:'John Doe',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image38,
+        image:'/images/advertising/social_media.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       },
@@ -434,7 +396,7 @@ let data =[
         author:'Steve Grant',
         date:'April 16, 2020',
         read:'1 min read',
-        image:image39,
+        image:'/images/advertising/reactive_marketing.webp',
         tags:['#agency','#business','#technology'],
         icons:['f','t','in','e-mail']
       }

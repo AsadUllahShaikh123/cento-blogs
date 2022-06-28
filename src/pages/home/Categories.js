@@ -1,5 +1,5 @@
 import React from 'react'
-
+import data from '../../data'
 const Categories = () => {
   let boxes =[
     {
@@ -34,8 +34,7 @@ const Categories = () => {
                       <h1 style={{fontWeight:'600',padding:'16px',color:'rgb(113, 128, 150)'}}>{box.category}</h1>
                     </div>
                     )
-                }
-                
+                } 
               </div>
         </div>
       </div>
