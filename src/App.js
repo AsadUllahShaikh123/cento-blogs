@@ -1,5 +1,6 @@
 import React from 'react'
-import Header from './pages/home/Header'
+import Home from './pages/home/Home'
+// import Header from './pages/home/Header'
 // import Team from './pages/team/Team'
 // import Footer from './components/footer/Footer'
 // import Contact from './pages/contact/Contact'
@@ -7,7 +8,8 @@ import Header from './pages/home/Header'
 const App = () => {
   return (
     <>
-    <Header/>
+    <Home/>
+    {/* <Header/> */}
     {/* <Contact/> */}
       {/* <Footer/>  */}
       {/* <Team/> */}
