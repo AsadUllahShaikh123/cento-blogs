@@ -10,6 +10,9 @@
   box-sizing: border-box;
   font-family: 'Inter',sans-serif;
 }
+a:hover {
+  cursor: pointer;
+}
 label {
   display: block;
   margin-bottom: 0.5rem;
@@ -91,6 +94,7 @@ label {
   padding: 2rem;
 }
 
+
 .content h2 {
   font-size: 20px;
 }
@@ -98,6 +102,47 @@ label {
   padding:8px 16px
 }
 
+.margin-top-container {
+  margin : 4rem 0;
+  border-top-width: 2px;
+  border-color: transparent;
+}
+.margin-bottom-container
+{
+  margin:2rem 0;
+  border-top-width: 2px;
+  border-color: transparent;
+}
+.straight-line
+{
+  width: 5px;
+  height: 32px;
+  background-color: rgb(226, 232, 240);
+  margin-right: 27px;
+}
+
+/* first svg */
+.css-l9ytao {
+  font-size: 9rem;
+  color: #9f7aea;
+}
+
+.css-1iew42x {
+  font-size: 7rem;
+  color: #e2e8f0;
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+  margin-top: 0.5rem;
+  margin-left: -3rem;
+}
+.subscribe-heading{
+  font-size: 24px;
+  line-height:31.92px ;
+}
+.banner-padding{
+  padding:0 32px
+}
 @media (max-width:768px){
   .backgroundImage{
     background-image: none;
@@ -112,5 +157,32 @@ label {
   .download{
     padding: 6.8px 13.6px;
     font-size: 13.6px;
+  }
+  .margin-top-container{
+    margin: 27px 0
+  }
+  .margin-bottom-container{
+    margin: 13.6px;
+  }
+  .category-heading{
+    width:100%
+  }
+  .subscribe-section
+  {
+    padding:0 13.6px
+  }
+  .text-center
+  {
+    font-size: 13.6px;
+    line-height: 24.48px;
+    width: 401px;
+  }
+  .subscribe-heading{
+    font-size: 20.4px;
+    line-height: 27.132px;
+    font-weight: 700;
+  }
+  .banner-padding{
+    padding:0 13.6px;
   }
 }

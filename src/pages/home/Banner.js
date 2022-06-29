@@ -8,7 +8,7 @@ const Banner = () => {
 
       
       <div className="banner-container w-full ">
-        <div className=" md:w-1140 w-full  px-8  mx-auto">
+        <div className="banner-padding md:w-1140 w-full    mx-auto">
           <div
             className="backgroundImage-content"
             style={{
