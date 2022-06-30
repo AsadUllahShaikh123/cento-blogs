@@ -13,8 +13,8 @@ const SingleCard = ({
       <div
         className="single-card w-1/3 p-2"
       >
-        <div className="bg-white rounded-lg "
-        style={{ boxShadow: "1px 1px 5px 0 rgb(1 1 1 / 5%)"}} >
+        <div className="single-card-content bg-white rounded-lg "
+         >
 
         
         <a href="#image" className="flex">
@@ -22,7 +22,7 @@ const SingleCard = ({
             <img src={image} alt="" srcset="" style={{ borderRadius: "8px" }} />
           </div>
         </a>
-        <div className="content" style={{ padding: "32px" }}>
+        <div className="content flex flex-col flex-1 justify-center" style={{ padding: "32px" }}>
           <div className="button" style={{ marginBottom: "16px" }}>
             <a
               href="#button"

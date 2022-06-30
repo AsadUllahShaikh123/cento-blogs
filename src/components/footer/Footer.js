@@ -67,7 +67,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer w-full"  >
-        <div className="footer-container w-full  md:w-4/5 mr-auto ml-auto flex md:justify-between md:items-center md:flex-row flex-col-reverse justify-between items-center py-12" style={{height:'430px'}}>
+        <div className="footer-container w-full  md:w-4/5 mr-auto ml-auto flex md:justify-between md:items-center md:flex-row flex-col-reverse justify-between items-center py-12" style={{minHeight:'275.66px'}}>
           
           {/*  Logo Section Started */}
           <div
