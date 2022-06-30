@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "./Banner";
+import BlogCards from "./BlogCards";
 import Categories from "./Categories";
 import Heading from "./Heading";
 import MainContent from "./MainContent";
@@ -10,8 +11,9 @@ const Hero = () => {
     <>
       <Categories />
       <MainContent/>
-      {/* <Banner/>
       <Heading/>
+      <BlogCards/>
+      {/* <Banner/>
       <Subscribe/> */}
       
     </>

@@ -89,6 +89,16 @@ label {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
+.card-content {
+  transition: transform 250ms ease, box-shadow 250ms ease, color 250ms ease;
+  box-shadow: 0px 2px 4px rgb(46 41 51 / 8%), 0px 5px 10px rgb(71 63 79 / 16%)
+  }
+.card-content:hover {
+  cursor: pointer;
+  transform: translateY(-5px) ;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+}
 .backgroundImage {
   background-image: url('/public/images/banner.png');
   padding: 2rem;
@@ -143,6 +153,35 @@ label {
 .banner-padding{
   padding:0 32px
 }
+
+.card {
+  padding:8px;
+  width: 100%;
+}
+
+.css-5fuvjv  {
+  color:#9f7aea;
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:768px){
   .backgroundImage{
     background-image: none;
