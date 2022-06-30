@@ -8,13 +8,16 @@ const Card = ({ category,articleHeading,author,date,read,image }) => {
           className="card-content bg-white border-l-4 rounded-lg  flex justify-between"
           style={{ borderColor: "#a3bffa" }}
         >
-          <div style={{ margin: "8px",marginRight:'0', width: "130px", height: "135px" }}>
+          {
+            image && <div style={{ margin: "8px",marginRight:'0', width: "130px", height: "135px" }}>
             <img
               src={image}
               alt=""
               style={{ width: "130px", height: "135px", borderRadius: "8px" }}
             />
           </div>
+          }
+          
           <div className="content flex-1 p-4">
             <button
               style={{
