@@ -8,7 +8,7 @@ import Heading from "./Heading";
 import MainContent from "./MainContent";
 import Subscribe from "./Subscribe";
 
-const Hero = () => {
+const Hero = ({black}) => {
 
   let advertise =  data[0].advertising.slice(0,3)
   let adWithoutImages = data[0].advertising.slice(3,6)
@@ -18,20 +18,27 @@ const Hero = () => {
 
   let case_studies = data[0].case_studies.slice(0,1);
   let case_studies_without_photos = data[0].case_studies.slice(1,4);
+  let case_studies_2 = data[0].case_studies.slice(4,5)
+
+  let management = data[0].management.slice(0,1)
+  let management_without_photos = data[0].management.slice(1,4)
+  let management_2 = data[0].management.slice(4,5)
   return (
 
 
     <>
-      <Categories />
-      <MainContent/>
+      <Categories black={black} />
+      <MainContent black={black}/>
       <Heading heading={"Advertising"}/>
-      <BlogCards singleCardData={advertise} cardData={adWithoutImages} />
-      <Banner/>      
-      <Heading heading={"Case Studies"}/>
-      <CaseStudy/>
-      <Heading heading={"Innovations"}/>
-      <BlogCards singleCardData={innovation} cardData={inWithoutImages}/>
-      <Subscribe/>
+      <BlogCards singleCardData={advertise} cardData={adWithoutImages} black={black} />
+      <Banner black={black}/>      
+      <Heading heading={"Case Studies"} black={black}/>
+      <CaseStudy card={case_studies} cards_without_photos={case_studies_without_photos} card2={case_studies_2} black={black}/>
+      <Heading heading={"Innovations"} black={black}/>
+      <BlogCards singleCardData={innovation} cardData={inWithoutImages} black={black}/>
+      <Heading heading={"Management"} black={black} />
+      <CaseStudy card={management} cards_without_photos={management_without_photos} card2={management_2} black={black} />
+      <Subscribe black={black}/>
       
     </>
   );

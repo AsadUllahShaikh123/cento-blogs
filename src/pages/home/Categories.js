@@ -1,5 +1,5 @@
 import React from 'react'
-const Categories = () => {
+const Categories = ({black}) => {
   let boxes =[
     {
       category:'Case Studies',
@@ -26,9 +26,9 @@ const Categories = () => {
               <div className="category-boxes flex justify-between overflow-x-auto">
                 {
                   boxes.map(box => 
-                    <div className="box w-23 m-2 inline-block text-center bg-white rounded-2xl" style={{}}>
+                    <div className="box w-23 m-2 inline-block text-center  rounded-2xl" style={{backgroundColor:`${black ? 'rgb(45, 55, 72)':'white'}`}}>
                       <div className="icon">
-                        <i className={`icon ${box.icon} text-3xl pt-4 text-blue-500`} />
+                        <i className={`icon ${box.icon} text-3xl pt-4 `} style={{color:'#667eea'}} />
                       </div>
                       <h1 style={{fontWeight:'600',padding:'16px',color:'rgb(113, 128, 150)'}}>{box.category}</h1>
                     </div>

@@ -1,12 +1,12 @@
 import React from "react";
 
-const Card = ({ category,articleHeading,author,date,read,image }) => {
+const Card = ({ category,articleHeading,author,date,read,image,black }) => {
   return (
     <>
       <div className="card ">
         <div
-          className="card-content bg-white border-l-4 rounded-lg  flex justify-between"
-          style={{ borderColor: "#a3bffa" }}
+          className="card-content border-l-4 rounded-lg  flex justify-between"
+          style={{ borderColor: `${black ? '#5a67d8': '#a3bffa'}`,backgroundColor:`${black ? 'rgb(45, 55, 72)':'white'}` }}
         >
           {
             image && <div style={{ margin: "8px",marginRight:'0', width: "130px", height: "135px" }}>
@@ -34,7 +34,7 @@ const Card = ({ category,articleHeading,author,date,read,image }) => {
             </button>
             <p
               style={{
-                color: "rgb(45, 55, 72)",
+                color: `${black ? 'rgb(237, 242, 247)': "rgb(45, 55, 72)"}`,
                 fontWeight: "600",
                 marginBottom: "8px",
               }}

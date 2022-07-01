@@ -7,13 +7,15 @@ const SingleCard = ({
   date,
   read,
   image,
+  black
 }) => {
   return (
     <>
       <div
         className="single-card w-1/3 p-2"
       >
-        <div className="single-card-content bg-white rounded-lg "
+        <div className="single-card-content  rounded-lg "
+        style={{backgroundColor:`${black ? "rgb(45, 55, 72)":'white'}`}}
          >
 
         
@@ -43,7 +45,7 @@ const SingleCard = ({
             style={{
               fontSize: "20px",
               fontWeight: "700",
-              color: "rgb(45, 55, 72)",
+              color: `${black ? 'rgb(237, 242, 247)':"rgb(45, 55, 72)" }`,
               marginBottom: "16px",
               display: "flex",
             }}

@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card'
 import SingleCard from './SingleCard'
 
-const BlogCards = ({singleCardData,cardData}) => {
+const BlogCards = ({singleCardData,cardData,black}) => {
  
   return (
     <>
@@ -12,7 +12,7 @@ const BlogCards = ({singleCardData,cardData}) => {
             <div className="blog-cards-content flex  justify-between w-full">
                 {
                   singleCardData.map(value => 
-                    <SingleCard category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} image={value.image} />
+                    <SingleCard category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} image={value.image} black={black} />
                   )
                 }              
             </div>
@@ -21,7 +21,7 @@ const BlogCards = ({singleCardData,cardData}) => {
               <div className="blog-cards-without-image flex ">
               {
                 cardData.map(value => 
-                  <Card category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read}/>
+                  <Card category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} black={black}/>
                   )
               }
              </div>

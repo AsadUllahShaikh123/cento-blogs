@@ -1,6 +1,6 @@
 import React from "react";
 
-const Team = () => {
+const Team = ({black}) => {
   let teamData = [
     {
       name: "Jane Smith",
@@ -79,7 +79,9 @@ const Team = () => {
     },
   ];
   return (
-    <div className="team" style={{ backgroundColor: "rgb(248, 248, 248)" }}>
+  <>
+    <div className="team flex flex-col flex-1" style={{ backgroundColor: `${black ? 'rgb(26, 32, 44)':"rgb(248, 248, 248)"}` }}>
+    <div className="margin-top" style={{marginTop:'32px',border:'2px solid transparent'}}></div>
       <div className="team-container md:mx-32 mx-4">
         {/* Heading */}
         <div className="heading mb-8">
@@ -98,9 +100,9 @@ const Team = () => {
         
         {teamData.map((value) => (
           <>
-          <div className="main-box rounded-lg px-4 py-6 mb-4 w-full bg-white ">
-            <div className="box flex md:justify-between  md:flex-row flex-col items-center  w-full">
-              <div className=" hover:cursor-pointer image-box md:w-1/4 w-full mb-4 md:m-0 flex justify-center items-center">
+          <div className="main-box rounded-lg px-4 py-6 mb-4 w-full  " style={{backgroundColor:`${black ? 'rgb(45, 55, 72)' : 'white'}`}}>
+            <div className="team-box flex md:justify-between  md:flex-row flex-col items-center  w-full ">
+              <div className=" hover:cursor-pointer image-box md:w-1/4 w-full mb-4 md:m-0 flex justify-center items-center ">
                 <div className="image rounded-full border-2 flex justify-center items-center" style={{width:'160px',height:'160px'}}>
                 <img
                   className="rounded"
@@ -110,8 +112,8 @@ const Team = () => {
                   style={{ width: "150px", height: "150px",borderRadius:'50%' }}
                 />
                 </div>
-              </div>
-              <div className="content-box w-2/3">
+              </div>  
+              <div className="content-box w-2/3 ">
                 <div className="heading-name">
                   <h1
                     className="text-xl font-bold mb-4 cursor-pointer md:text-start text-center"
@@ -183,7 +185,9 @@ const Team = () => {
           </>
         ))}
       </div>
+      <div className="margin-top" style={{marginTop:'128px',border:'2px solid transparent'}}></div>
     </div>
+    </>
   );
 };
 

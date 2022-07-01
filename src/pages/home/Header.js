@@ -1,11 +1,17 @@
 import { useState } from "react";
-
-const Header = () => {
+import {useNavigate} from 'react-router-dom'
+const Header = ({black,setBlack}) => {
   
   let [mode,setMode] = useState(true);
+  let navigate = useNavigate();
+
+  let handleClick=()=>{
+    setMode(!mode)
+    setBlack(!black)
+  }
   return (
     <>
-      <div className="header">
+      <div className='header' style={{backgroundColor:`${black ? 'rgb(45, 55, 72)' :'white'}`}}>
         <header className="md:w-1140 w-full px-3 md:ml-auto md:mr-auto ">
           <div className="content flex flex-auto items-center justify-between md:py-8 py-5">
             
@@ -47,9 +53,9 @@ const Header = () => {
 
             {/* Links  */}
             <div className=" hidden links md:flex w-1/3 justify-end ">
-              <p className="mx-2 p-1">Home</p>
-              <p className="mx-2 p-1">Our Team</p>
-              <p className="mx-2 p-1">Contact</p>
+              <p className="mx-2 p-1" onClick={()=> navigate('/')} >Home</p>
+              <p className="mx-2 p-1" onClick={()=> navigate('/team')}>Our Team</p>
+              <p className="mx-2 p-1" onClick={()=> navigate('/contact')}>Contact</p>
             </div>
 
             {/* Links on small screen */}
@@ -85,7 +91,7 @@ const Header = () => {
             {/* Toggle Button */}
             <div className="toggle-button hidden md:block  ">
               
-              <button onClick={()=> setMode(!mode)} aria-label="Toggle dark mode" className={`${mode ?  'light': 'dark flex-row-reverse'} ml-2 px-1 text-white flex justify-between items-center`}> 
+              <button onClick={()=> handleClick()} aria-label="Toggle dark mode" className={`${mode ?  'light': 'dark flex-row-reverse'} ml-2 px-1 text-white flex justify-between items-center`}> 
                
                 <span style={{width:'21px',height:'21px',display:'inline-block',backgroundColor:'white',borderRadius:'50%',border:'none'}}></span>
                 

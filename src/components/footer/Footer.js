@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({black}) => {
   let data = [
     {
       para: "Quick Links",
@@ -66,7 +66,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="footer w-full"  >
+      <div className="footer w-full" style={{backgroundColor:`${black ? 'rgb(45, 55, 72)' : 'white'}`}} >
         <div className="footer-container w-full  md:w-4/5 mr-auto ml-auto flex md:justify-between md:items-center md:flex-row flex-col-reverse justify-between items-center py-12" style={{minHeight:'275.66px'}}>
           
           {/*  Logo Section Started */}
@@ -117,7 +117,7 @@ const Footer = () => {
               >
                 {value.links.map((value) => (
                   
-                    <a href={value.link}  className="text-gray-500 font-bold md:font-normal text-base hover:text-blue-400 md:flex text-center ml-4 text-sm md:mb-5">
+                    <a href={value.link}  className="text-gray-500 font-bold md:font-normal text-base hover:text-blue-400 md:flex text-center ml-4  md:mb-5">
                       {value?.icon && <p><i className={value?.icon} style={{marginRight:'0.5rem',color:`${value?.color && value.color}`}}></i></p> } 
                        {value.value}
                     </a>

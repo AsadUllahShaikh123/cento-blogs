@@ -1,6 +1,6 @@
 import React from "react";
 
-const Banner = () => {
+const Banner = ({black}) => {
   return (
     <>
     {/* This container is just for margin top */}
@@ -12,7 +12,7 @@ const Banner = () => {
           <div
             className="backgroundImage-content"
             style={{
-              backgroundColor: "#2d3748",
+              backgroundColor: `${black ? 'white':"#2d3748"}`,
               width: "100%",
               minHeight: "136px",
               borderRadius: "0.5rem",

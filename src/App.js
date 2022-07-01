@@ -1,18 +1,21 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home'
-// import Header from './pages/home/Header'
-// import Team from './pages/team/Team'
+import Contact from './pages/contact/Contact'
+import Team from './pages/team/Team'
+import Header from './pages/home/Header'
 import Footer from './components/footer/Footer'
-// import Contact from './pages/contact/Contact'
-
 const App = () => {
+  let [black,setBlack] = useState(false)
   return (
     <>
-    <Home/>
-    {/* <Header/> */}
-    {/* <Contact/> */}
-      <Footer/> 
-      {/* <Team/> */}
+      <Header black={black} setBlack={setBlack}/>
+      <Routes>
+        <Route path='/' element={<Home black={black}/>}/>
+        <Route path='/contact' element={<Contact black={black}/>}/>
+        <Route path='/team' element={<Team black={black} />}/>
+      </Routes>
+      <Footer black={black}/>
     </>
   )
 }

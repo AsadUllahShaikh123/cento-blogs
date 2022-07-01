@@ -1,15 +1,9 @@
 import React from "react";
-import data from "../../data";
-import Card from "./Card";
 import CaseCard from "./CaseCard";
 import SingleCard from "./SingleCard";
 
-const CaseStudy = () => {
-  let card = data[0].case_studies.slice(0, 1);
-  let cards_without_photos = data[0].case_studies.slice(1,4);
-  let card2 = data[0].case_studies.slice(1, 2);
-
-
+const CaseStudy = ({card,cards_without_photos,card2,black}) => {
+  
   return (
     <>
       <div
@@ -27,18 +21,19 @@ const CaseStudy = () => {
                 date={value.date}
                 read={value.read}
                 image={value.image}
+                black={black}
               />
             ))}
             <div className="cards-without-images flex flex-col w-2/5">
                 {
                   cards_without_photos.map(value => 
-                    <CaseCard category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} image={value.image}/>
+                    <CaseCard category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} image={value.image} black={black}/>
                     )
 
                     
                 }
             </div>
-            {card.map((value) => (
+            {card2.map((value) => (
               <SingleCard
                 category={value.category}
                 articleHeading={value.articleHeading}
@@ -46,6 +41,7 @@ const CaseStudy = () => {
                 date={value.date}
                 read={value.read}
                 image={value.image}
+                black={black}
               />
             ))}
 
