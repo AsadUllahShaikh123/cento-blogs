@@ -178,7 +178,9 @@ label {
   margin-bottom: 1rem;
 }
 
-
+.description :not(:last-child) + ::before {
+  content: " ・ ";
+}
 
 
 

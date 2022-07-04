@@ -5,7 +5,7 @@ import Contact from './pages/contact/Contact'
 import Team from './pages/team/Team'
 import Header from './pages/home/Header'
 import Footer from './components/footer/Footer'
-// import Blog from './pages/Blog'
+import Blog from './pages/Blog'
 const App = () => {
   let [black,setBlack] = useState(false)
   return (
@@ -15,9 +15,9 @@ const App = () => {
         <Route path='/' element={<Home black={black}/>}/>
         <Route path='/contact' element={<Contact black={black}/>}/>
         <Route path='/team' element={<Team black={black} />}/>
-        {/* <Route path="/" element={<Blog/>}/> */}
+        <Route path="/blogs" element={<Blog/>}/>
       </Routes>
-      <Footer black={black}/>
+      {/* <Footer black={black}/> */}
     </>
   )
 }
