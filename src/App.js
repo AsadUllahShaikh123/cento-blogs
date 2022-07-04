@@ -17,7 +17,7 @@ const App = () => {
         <Route path='/team' element={<Team black={black} />}/>
         <Route path="/blogs" element={<Blog/>}/>
       </Routes>
-      {/* <Footer black={black}/> */}
+      <Footer black={black}/>
     </>
   )
 }

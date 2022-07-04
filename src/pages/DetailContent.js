@@ -344,9 +344,8 @@ const DetailContent = () => {
           </div>
         </div>
 
-        <hr style={{margin:'2rem 0'}}/>
-        <div id="graphcomment" style={{ width: "100%"}}>
-          
+        <hr style={{ margin: "2rem 0" }} />
+        <div id="graphcomment" style={{ width: "100%" }}>
           <script
             src="https://graphcomment.com/js/integration.js?1656923088119"
             async=""
@@ -362,10 +361,31 @@ const DetailContent = () => {
               width: "100%",
               margin: "0px auto",
               display: "block",
-              
+
               border: "none !important",
             }}
           ></iframe>
+        </div>
+
+        <div
+          className="previous-next"
+          style={{ margin: "2rem -2rem -2rem -2rem",backgroundColor:'rgb(226, 232, 240)' }}
+        >
+          <div style={{padding:'2rem',display:'flex',justifyContent:'space-between'}}>
+            
+            <div className="previous w-1/2" >
+              <div style={{ marginBottom: "8px",color:'rgb(113, 128, 150)' }}>Previous Article</div>
+              <a href="#previous" style={{fontWeight:'600',color:'rgb(45, 55, 72)'}}>
+                A Marketer's Guide to Price Comparsion Websites
+              </a>
+            </div>
+            <div className="next w-1/2 text-right">
+              <div style={{ marginBottom: "8px",color:'rgb(113, 128, 150)' }}>Next Article</div>
+              <a href="#next" style={{fontWeight:'600',color:'rgb(45, 55, 72)'}}>
+                Markdown Language Sample Blog Post Styling
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

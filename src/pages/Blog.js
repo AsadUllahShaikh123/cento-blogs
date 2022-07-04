@@ -4,7 +4,7 @@ import DetailContent from "./DetailContent";
 const Blog = () => {
   return (
     <>
-      <div className="blogs">
+      <div className="blogs" style={{backgroundColor:'rgb(248, 248, 248)'}}>
         <div
           className="margin-top"
           style={{ margin: "32px 0", border: "2px solid transparent" }}
@@ -39,19 +39,23 @@ const Blog = () => {
         </div>
 
         {/* Blogs Details  */}
-        <div
-          className="margin-top"
-          style={{ margin: "32px 0", border: "2px solid transparent" }}
-        ></div>
 
-        <div className="blogs-details w-1140 ml-auto mr-auto px-8 flex ">
+          <div
+            className="margin-top"
+            style={{ margin: "32px 0", border: "2px solid transparent" }}
+          ></div>
+        <div className="blogs-details w-1140 ml-auto mr-auto px-8 flex " >
           <div className="blogs-detail-content w-2/3 border-2 border-black">
             <div className="">
               <DetailContent />
             </div>
           </div>
-          <div className="blogs-related-posts w-1/3 border-2 border-blue-500"></div>
+          <div className="blogs-related-posts w-1/3 border-2 border-blue-500">
+
+          </div>
+          
         </div>
+        <div className="margin" style={{marginTop:'126px',borderTop:'2px solid transparent'}}></div>
       </div>
     </>
   );
