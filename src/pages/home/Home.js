@@ -3,7 +3,7 @@ import Hero from './Hero'
 const Home = ({black}) => {
   return (
     <>
-        <div className="hero-section" style={{backgroundColor:`${black ? 'rgb(26, 32, 44)':'rgb(248, 248, 248)'}`}}>
+        <div className="hero-section overflow-hidden" style={{backgroundColor:`${black ? 'rgb(26, 32, 44)':'rgb(248, 248, 248)'}`}}>
             <Hero black={black}/>
         </div>
     </>

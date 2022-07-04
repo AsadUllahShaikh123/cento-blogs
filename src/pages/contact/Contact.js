@@ -18,7 +18,7 @@ const Contact = ({black}) => {
   return (
 
     <div className="contact min-h-screen w-full " style={{backgroundColor:`${black?'#1A202C':'rgb(243 244 246)'}`}}>
-           <div className="margin-top" style={{marginTop:'32px',border:'2px solid transparent'}}></div>
+           <div className="margin-top" style={{marginTop:'32px',borderTop:'2px solid transparent'}}></div>
 
        <div className="contact-container mx-3 md:mx-36 flex justify-between py-8 md:py-16">
 

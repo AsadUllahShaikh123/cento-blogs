@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Heading = ({heading,black}) => {
+const   Heading = ({heading,black}) => {
   return (
     <>
       <div className="margin-top-container"></div>

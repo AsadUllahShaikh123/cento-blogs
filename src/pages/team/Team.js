@@ -80,7 +80,7 @@ const Team = ({black}) => {
   ];
   return (
   <>
-    <div className="team flex flex-col flex-1" style={{ backgroundColor: `${black ? 'rgb(26, 32, 44)':"rgb(248, 248, 248)"}` }}>
+    <div className="team flex  flex-col flex-1" style={{ backgroundColor: `${black ? 'rgb(26, 32, 44)':"rgb(248, 248, 248)"}` }}>
     <div className="margin-top" style={{marginTop:'32px',border:'2px solid transparent'}}></div>
       <div className="team-container md:mx-32 mx-4">
         {/* Heading */}
@@ -101,9 +101,10 @@ const Team = ({black}) => {
         {teamData.map((value) => (
           <>
           <div className="main-box rounded-lg px-4 py-6 mb-4 w-full  " style={{backgroundColor:`${black ? 'rgb(45, 55, 72)' : 'white'}`}}>
-            <div className="team-box flex md:justify-between  md:flex-row flex-col items-center  w-full ">
-              <div className=" hover:cursor-pointer image-box md:w-1/4 w-full mb-4 md:m-0 flex justify-center items-center ">
-                <div className="image rounded-full border-2 flex justify-center items-center" style={{width:'160px',height:'160px'}}>
+            <div className="team-box flex md:justify-between 
+             md:flex-row flex-col items-center  w-full ">
+              <div className=" hover:cursor-pointer image-box  md:w-1/4 w-full mb-4 md:m-0 flex justify-center items-center ">
+                <div className="image rounded-full  flex justify-center items-center" style={{width:'160px',height:'160px'}}>
                 <img
                   className="rounded"
                   src={value.image}
@@ -113,10 +114,10 @@ const Team = ({black}) => {
                 />
                 </div>
               </div>  
-              <div className="content-box w-2/3 ">
-                <div className="heading-name">
+              <div className="content-box md:w-2/3 w-full  ">
+                <div className="heading-name ">
                   <h1
-                    className="text-xl font-bold mb-4 cursor-pointer md:text-start text-center"
+                    className="text-xl font-bold mb-4 inline-block cursor-pointer  md:text-start text-center"
                     style={{ color: "rgb(90, 103, 218)" }}
                   >
                     {value.name}

@@ -6,7 +6,7 @@ const Card = ({ category,articleHeading,author,date,read,image,black }) => {
       <div className="card ">
         <div
           className="card-content border-l-4 rounded-lg  flex justify-between"
-          style={{ borderColor: `${black ? '#5a67d8': '#a3bffa'}`,backgroundColor:`${black ? 'rgb(45, 55, 72)':'white'}` }}
+          style={{borderColor: `${black ? '#5a67d8': '#a3bffa'}`,backgroundColor:`${black ? 'rgb(45, 55, 72)':'white'}` }}
         >
           {
             image && <div style={{ margin: "8px",marginRight:'0', width: "130px", height: "135px" }}>
@@ -18,7 +18,7 @@ const Card = ({ category,articleHeading,author,date,read,image,black }) => {
           </div>
           }
           
-          <div className="content flex-1 p-4">
+          <div className="content  p-4">
             <button
               style={{
                 padding: "4px 16px",

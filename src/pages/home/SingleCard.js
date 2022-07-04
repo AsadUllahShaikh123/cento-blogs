@@ -12,7 +12,7 @@ const SingleCard = ({
   return (
     <>
       <div
-        className="single-card w-1/3 p-2"
+        className="single-card md:w-1/3 w-full p-2"
       >
         <div className="single-card-content  rounded-lg "
         style={{backgroundColor:`${black ? "rgb(45, 55, 72)":'white'}`}}
@@ -24,7 +24,7 @@ const SingleCard = ({
             <img src={image} alt="" srcset="" style={{ borderRadius: "8px" }} />
           </div>
         </a>
-        <div className="content flex flex-col flex-1 justify-center" style={{ padding: "32px" }}>
+        <div className="content flex flex-col  justify-center" style={{ padding: "32px" }}>
           <div className="button" style={{ marginBottom: "16px" }}>
             <a
               href="#button"
