@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card'
 import SingleCard from './SingleCard'
 
-const BlogCards = ({singleCardData,cardData,black}) => {
+const BlogCards = ({singleCardData,cardData,black,blogCategory,setBlogCategory}) => {
  
   return (
     <>
@@ -12,7 +12,7 @@ const BlogCards = ({singleCardData,cardData,black}) => {
             <div className="blog-cards-content flex md:flex-nowrap flex-wrap justify-between w-full">
                 {
                   singleCardData.map(value => 
-                    <SingleCard category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} image={value.image} black={black} />
+                    <SingleCard category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} image={value.image} black={black} blogCategory={blogCategory} setBlogCategory={setBlogCategory} />
                   )
                 }              
             </div>

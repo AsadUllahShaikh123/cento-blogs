@@ -1,11 +1,11 @@
 import React from "react";
 
-const DetailContent = () => {
+const DetailContent = ({image}) => {
   return (
     <div className="blog-detail w-full">
       <div className="image">
         <img
-          src="/images/management/easy_ways.webp  "
+          src={image}
           style={{
             width: "1600px",
             height: "368px",

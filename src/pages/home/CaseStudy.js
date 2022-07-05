@@ -2,7 +2,7 @@ import React from "react";
 import CaseCard from "./CaseCard";
 import SingleCard from "./SingleCard";
 
-const CaseStudy = ({card,cards_without_photos,card2,black}) => {
+const CaseStudy = ({card,cards_without_photos,card2,black,blogCategory,setBlogCategory}) => {
   
   return (
     <>
@@ -22,6 +22,8 @@ const CaseStudy = ({card,cards_without_photos,card2,black}) => {
                 read={value.read}
                 image={value.image}
                 black={black}
+                blogCategory={blogCategory}
+                setBlogCategory={setBlogCategory}
               />
             ))}
             <div className="cards-without-images flex flex-col md:w-2/5 w-full">
@@ -42,6 +44,8 @@ const CaseStudy = ({card,cards_without_photos,card2,black}) => {
                 read={value.read}
                 image={value.image}
                 black={black}
+                blogCategory={blogCategory}
+                setBlogCategory={setBlogCategory}
               />
             ))}
 

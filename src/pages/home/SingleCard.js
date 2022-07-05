@@ -1,5 +1,5 @@
 import React from "react";
-
+import {useNavigate} from 'react-router-dom'
 const SingleCard = ({
   category,
   articleHeading,
@@ -7,12 +7,20 @@ const SingleCard = ({
   date,
   read,
   image,
-  black
+  black,
+  blogCategory,
+  setBlogCategory
 }) => {
+  let navigate = useNavigate();
+  let setRoute=()=>{
+    navigate(`${articleHeading}`)   
+    setBlogCategory({category,articleHeading,author,date,read,image}) 
+  }
   return (
     <>
       <div
         className="single-card md:w-1/3 w-full p-2"
+        onClick={()=> setRoute()}
       >
         <div className="single-card-content  rounded-lg "
         style={{backgroundColor:`${black ? "rgb(45, 55, 72)":'white'}`}}
