@@ -41,7 +41,7 @@ const Blog = ({blogCategory}) => {
               </div>
             </div>
           </div>
-        </div>
+        </div> 
 
         {/* Blogs Details  */}
 

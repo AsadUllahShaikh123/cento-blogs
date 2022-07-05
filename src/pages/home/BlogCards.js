@@ -21,7 +21,7 @@ const BlogCards = ({singleCardData,cardData,black,blogCategory,setBlogCategory})
               <div className="blog-cards-without-image md:flex-nowrap flex-wrap flex  w-full ">
               {
                 cardData.map(value => 
-                  <Card category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} black={black}/>
+                  <Card category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} black={black} blogCategory={blogCategory} setBlogCategory={setBlogCategory} />
                   )
               }
              </div>

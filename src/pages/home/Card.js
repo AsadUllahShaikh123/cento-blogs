@@ -1,9 +1,15 @@
 import React from "react";
-
-const Card = ({ category,articleHeading,author,date,read,image,black }) => {
+import {useNavigate} from 'react-router-dom'
+const Card = ({ category,articleHeading,author,date,read,image,black,blogCategory,setBlogCategory }) => {
+  let navigate = useNavigate()
+  let handleRoute =()=>{
+    navigate(`${articleHeading}`)
+    setBlogCategory({category,articleHeading,author,date,read})
+    alert('helo')
+  }
   return (
     <>
-      <div className="card ">
+      <div className="card " onClick={()=> handleRoute()}>
         <div
           className="card-content border-l-4 rounded-lg  flex justify-between"
           style={{borderColor: `${black ? '#5a67d8': '#a3bffa'}`,backgroundColor:`${black ? 'rgb(45, 55, 72)':'white'}` }}

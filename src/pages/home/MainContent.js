@@ -1,13 +1,19 @@
 import React, { useState } from "react";
+import {useNavigate} from 'react-router-dom'
 import data from "../../data";
 import Card from "./Card";
 import image1 from "./slider/markdown.webp";
 import image2 from "./slider/programmatic_outdoor.webp";
 import image3 from "./slider/shopping.webp";
-const MainContent = ({black}) => {
+const MainContent = ({black,setBlogCategory}) => {
+  let navigate = useNavigate();
   let [imageNumber, setImageNumber] = useState(0);
   let image = [image1, image2, image3];
   let advertise = data[0].advertising.slice(0,4)
+  let handleRoute =(category,articleHeading,author,date,read,image)=>{
+    navigate(`${articleHeading}`)
+    setBlogCategory(category,articleHeading,author,date,read,image);
+  }
   return (
     <>
       <div className="main-content mt-8">
@@ -54,7 +60,7 @@ const MainContent = ({black}) => {
               <div className="blogs-section flex justify-between w-full flex-wrap" >
                 {
                   advertise.map(value => 
-                    <div className=" w-5/6 md:w-1/2">
+                    <div className=" w-5/6 md:w-1/2" onClick={()=> handleRoute(value.category,value.articleHeading,value.author,value.date,value.read, value.image)}>
                       <Card category={value.category} articleHeading={value.articleHeading} author={value.author} date={value.date} read={value.read} image ={value.image} black={black} />
                     </div>)
                 }
