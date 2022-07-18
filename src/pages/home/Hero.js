@@ -27,17 +27,17 @@ const Hero = ({black,blogCategory,setBlogCategory}) => {
 
 
     <>
-      <Categories black={black} />
+      <Categories black={black} setBlogCategory={setBlogCategory}/>
       <MainContent black={black} setBlogCategory={setBlogCategory}/>
       <Heading heading={"Advertising"}/>
       <BlogCards singleCardData={advertise} cardData={adWithoutImages} black={black}  blogCategory={blogCategory} setBlogCategory={setBlogCategory}/>
       <Banner black={black}/>      
       <Heading heading={"Case Studies"} black={black} />
-      <CaseStudy card={case_studies} cards_without_photos={case_studies_without_photos} card2={case_studies_2} black={black} blogCategory={blogCategory} setBlogCategory={setBlogCategory}/>
+      <CaseStudy card={case_studies} cards_without_photos={case_studies_without_photos} card2={case_studies_2} black={black} index={blogCategory} setBlogCategory={setBlogCategory}/>
       <Heading heading={"Innovations"} black={black} />
       <BlogCards singleCardData={innovation} cardData={inWithoutImages} black={black} blogCategory={blogCategory} setBlogCategory={setBlogCategory}/>
       <Heading heading={"Management"} black={black}/>
-      <CaseStudy card={management} cards_without_photos={management_without_photos} card2={management_2} black={black}  blogCategory={blogCategory} setBlogCategory={setBlogCategory} />
+      <CaseStudy card={management} cards_without_photos={management_without_photos} card2={management_2} black={black}  index={blogCategory} setBlogCategory={setBlogCategory} />
       <Subscribe black={black}/>
       
     </>

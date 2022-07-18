@@ -67,11 +67,11 @@ const Footer = ({black}) => {
   return (
     <>
       <div className="footer w-full" style={{backgroundColor:`${black ? 'rgb(45, 55, 72)' : 'white'}`}} >
-        <div className="footer-container   md:w-4/5 mr-auto ml-auto flex md:justify-between md:items-center md:flex-row flex-col-reverse justify-between items-center py-12" style={{minHeight:'275.66px'}}>
+        <div className="footer-container flex-nowrap md:w-4/5 mr-auto ml-auto flex  md:justify-between md:items-center md:flex-row flex-col-reverse justify-between items-center py-12" style={{minHeight:'275.66px'}}>
           
           {/*  Logo Section Started */}
           <div
-            className="logos flex flex-col justify-between items-center md:items-start md:w-56 w-full md:h-40 h-36 md:mt-4 mt-8  md:m-0"
+            className="logos flex  flex-col justify-between items-center md:items-start md:w-56 w-full md:h-40 h-36 md:mt-4 mt-8  md:m-0"
             
           >
             <img
@@ -81,7 +81,7 @@ const Footer = ({black}) => {
               style={{ width: "150px", height: "35px" }}
             />
             <div className="copy-right">
-              <p style={{ color: " rgb(113, 128, 150)",  }}>
+              <p style={{ color: `${black? 'rgb(203, 213, 224)':" rgb(113, 128, 150)"}`  }}>
                 © 2022, All Rights Reserved.
               </p>
             </div>
@@ -92,6 +92,7 @@ const Footer = ({black}) => {
                   fontWeight: "600",
                   display: "flex",
                   alignItems: "center",
+                  color:`${black ? '#edf2f7':'black'}`
                 }}
               >
                 Powered By
@@ -99,7 +100,7 @@ const Footer = ({black}) => {
                   src="images/gatsby-logo.png"
                   alt=""
                   srcset=""
-                  style={{ width: "116px", height: "51px" }}
+                  style={{ width: "116px", height: "51px"}}
                 />
               </a>
             </div>
@@ -109,8 +110,8 @@ const Footer = ({black}) => {
 
           {data.map((value) => (
             // boorororo
-            <div className="links-section    ml-auto mr-auto md:m-0 md:h-40 " >
-              <p className="hidden md:block md:mb-5" style={{ fontWeight: "600" }} >{value.para}</p>
+            <div className="links-section  ml-auto mr-auto md:m-0 md:h-40 " >
+              <p className="hidden md:block md:mb-5" style={{ color:`${black ? 'white':'black'}`, fontWeight: "600" }} >{value.para}</p>
               <div className="flex justify-center md:flex " >
               <div
                 className="flex md:flex-col px-1 py-2 md:p-0 md:justify-center  w-full"
@@ -118,7 +119,7 @@ const Footer = ({black}) => {
               >
                 {value.links.map((value) => (
                   
-                    <a href={value.link}  className="text-gray-500 font-bold md:font-normal text-base hover:text-blue-700 md:flex text-center  ml-4  md:mb-5  ">
+                    <a href={value.link} style={{color:`${black? '#e2e8f0':'#718096' }`}} className="text-gray-500 font-bold md:font-normal text-base hover:text-blue-700 md:flex text-center  ml-4  md:mb-5  ">
                       {value?.icon && <p className=""><i className={value?.icon} style={{marginRight:'0.5rem',color:`${value?.color && value.color}`}}></i></p> } 
                        {value.value}
                     </a>

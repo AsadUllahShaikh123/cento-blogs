@@ -1,6 +1,7 @@
 import React from "react";
 import {useNavigate} from 'react-router-dom'
 const SingleCard = ({
+  index,
   category,
   articleHeading,
   author,
@@ -8,13 +9,19 @@ const SingleCard = ({
   read,
   image,
   black,
-  blogCategory,
-  setBlogCategory
+  setBlogCategory,
+  isCategory  
 }) => {
+  console.log(isCategory,'isCategory')
   let navigate = useNavigate();
   let setRoute=()=>{
-    navigate(`${articleHeading}`)   
-    setBlogCategory({category,articleHeading,author,date,read,image}) 
+    if(isCategory)
+      navigate(`/category/${index}`)   
+    else 
+      navigate(`${index}`)
+      
+    setBlogCategory(index) 
+    
   }
   return (
     <>

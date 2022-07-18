@@ -1,42 +1,68 @@
-import React, { useState } from "react";
+import React from "react";
 import data from "../data";
 import DetailContent from "./DetailContent";
 import RelatedBlogs from "./RelatedBlogs";
 
-const Blog = ({blogCategory}) => {
+
+
+const Blog = ({index,setBlogCategory,black}) => {
+  
+  console.log(index,'BlogsIndex')
+  
+  
+  let filtered = [];
+
+  data.map(values => {
+    for(let key in values){
+      let filter =  values[key].filter(value => value.index === index)
+      if(filter.length > 0){
+        filtered = [...filtered,filter]
+     }      
+    }
+  }
+    )
+
+    console.log(filtered,'filtered')
+    let image,articleHeading,category;
+    if(filtered.length > 0){
+      image =filtered[0][0].image;
+      articleHeading = filtered[0][0].articleHeading;
+      category = filtered[0][0].category;
+    }
+     
   
   return (
     <>
-      <div className="blogs" style={{ backgroundColor: "rgb(248, 248, 248)" }}>
+      <div className="blogs" style={{ backgroundColor: `${black ? 'rgb(26, 32, 44)' :"rgb(248, 248, 248)"}` ,border:'1px solid transparent' }}>
           
         <div
           className="margin-top"
           style={{ margin: "32px 0", border: "2px solid transparent" }}
         ></div>
-        <div className="blogs-heading-container w-1140 ml-auto mr-auto px-8">
+        <div className="blogs-heading-container md:w-1140 w-full ml-auto mr-auto px-8">
           <div className="blogs-heading">
             <h1
-              style={{ lineHeight: "63.8px" }}
-              class="text-4xl lg:text-5xl mb-4  text-heading text-gray-700 font-black"
+              style={{ lineHeight: "63.8px",color:`${black? 'rgb(237, 242, 247)':'rgb(45, 55, 72)'}` }}
+              class="text-4xl lg:text-5xl mb-4  text-heading  font-black"
             >
-              {blogCategory.articleHeading}
+              {articleHeading}
              
             </h1>{" "}
             <div className="description flex">
-              <div>
+              <div style={{color:`${black ? 'rgb(226, 232, 240)':' rgb(113, 128, 150)'}`}}>
                 By
                 <a href="#blog">
-                  <strong> Steve Grant</strong>
+                  <strong style={{color:`${black ? '#e2e8f0':'#718096'}`}}> Steve Grant</strong>
                 </a>
               </div>
-              <div className="dot">
+              <div className="dot" style={{color:`${black ? 'rgb(226, 232, 240)':' rgb(113, 128, 150)'}`}}>
                 published in
                 <a href="#blog">
-                  <strong> {blogCategory.category}</strong>
+                  <strong style={{color:`${black ? '#e2e8f0':'#718096'}`}}> {category}</strong>
                 </a>
               </div>
-              <div className="dot">April 16, 2020</div>
-              <div className="dot">
+              <div className="dot" style={{color:`${black ? 'rgb(226, 232, 240)':' rgb(113, 128, 150)'}`}}>April 16, 2020</div>
+              <div className="dot" style={{color:`${black ? 'rgb(226, 232, 240)':' rgb(113, 128, 150)'}`}}>
                 <strong>1 min read </strong>
               </div>
             </div>
@@ -49,15 +75,15 @@ const Blog = ({blogCategory}) => {
           className="margin-top"
           style={{ margin: "32px 0", border: "2px solid transparent" }}
         ></div>
-        <div className="blogs-details w-1140 ml-auto mr-auto px-8 flex ">
-          <div className="blogs-detail-content w-2/3 ">
+        <div className="blogs-details md:w-1140 w-full ml-auto mr-auto px-8 flex ">
+          <div className="blogs-detail-content md:w-2/3 w-full ">
             <div >
-              <DetailContent image ={blogCategory.image} />
+              <DetailContent image ={image} black={black} />
             </div>
           </div>
-          <div className="blogs-related-posts w-1/3 ">
+          <div className="blogs-related-posts w-1/3 hidden md:block ">
             <div className="side" style={{ paddingLeft: "64px" }}>
-              <RelatedBlogs  blogCategory={blogCategory} />
+              <RelatedBlogs  index={index} setBlogCategory={setBlogCategory} black={black} />
             </div>
           </div>
         </div>

@@ -10,9 +10,9 @@ const MainContent = ({black,setBlogCategory}) => {
   let [imageNumber, setImageNumber] = useState(0);
   let image = [image1, image2, image3];
   let advertise = data[0].advertising.slice(0,4)
-  let handleRoute =(category,articleHeading,author,date,read,image)=>{
-    navigate(`${articleHeading}`)
-    setBlogCategory(category,articleHeading,author,date,read,image);
+  let handleRoute =(index)=>{
+    navigate(`${index}`)
+    setBlogCategory(index);
   }
   return (
     <>
@@ -60,8 +60,8 @@ const MainContent = ({black,setBlogCategory}) => {
               <div className="blogs-section flex justify-between w-full flex-wrap" >
                 {
                   advertise.map(value => 
-                    <div className=" w-5/6 md:w-1/2" onClick={()=> handleRoute(value.category,value.articleHeading,value.author,value.date,value.read, value.image)}>
-                      <Card category={value.category} articleHeading={value.articleHeading} author={value.author} date={value.date} read={value.read} image ={value.image} black={black} />
+                    <div className=" w-5/6 md:w-1/2" onClick={()=> handleRoute(value.index)}>
+                      <Card index ={value.index} category={value.category} articleHeading={value.articleHeading} author={value.author} date={value.date} read={value.read} image ={value.image} black={black} setBlogCategory={setBlogCategory} />
                     </div>)
                 }
               </div>

@@ -12,7 +12,7 @@ const BlogCards = ({singleCardData,cardData,black,blogCategory,setBlogCategory})
             <div className="blog-cards-content flex md:flex-nowrap flex-wrap justify-between w-full">
                 {
                   singleCardData.map(value => 
-                    <SingleCard category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} image={value.image} black={black} blogCategory={blogCategory} setBlogCategory={setBlogCategory} />
+                    <SingleCard index ={value.index} category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} image={value.image} black={black} blogCategory={blogCategory} setBlogCategory={setBlogCategory} />
                   )
                 }              
             </div>
@@ -21,7 +21,7 @@ const BlogCards = ({singleCardData,cardData,black,blogCategory,setBlogCategory})
               <div className="blog-cards-without-image md:flex-nowrap flex-wrap flex  w-full ">
               {
                 cardData.map(value => 
-                  <Card category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} black={black} blogCategory={blogCategory} setBlogCategory={setBlogCategory} />
+                  <Card index={value.index} category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} black={black} blogCategory={blogCategory} setBlogCategory={setBlogCategory} />
                   )
               }
              </div>

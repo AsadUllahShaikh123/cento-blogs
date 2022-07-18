@@ -85,8 +85,8 @@ const Team = ({black}) => {
       <div className="team-container md:mx-32 mx-4">
         {/* Heading */}
         <div className="heading mb-8">
-          <h1 className="mb-2" style={{fontSize:'48px',fontWeight:'900',color:'rgb(45, 55, 72)'}}>Team Members</h1>
-          <p style={{fontSize:'20px',color:'rgb(113, 128, 150)'}}>
+          <h1 className="mb-2" style={{fontSize:'48px',fontWeight:'900',color:`${black ? 'rgb(237, 242, 247)':'rgb(45, 55, 72)'}`}}>Team Members</h1>
+          <p style={{fontSize:'20px',color: `${black ? 'rgb(226, 232, 240)':'rgb(113, 128, 150)'}`}}>
             FlexiBlog theme comes with a pre-made contact form component.You can
             integrate this form with serverless services such as
             Formspree,Getform,FormKeep and others to recieve form submissions
@@ -102,8 +102,8 @@ const Team = ({black}) => {
           <>
           <div className="main-box rounded-lg px-4 py-6 mb-4 w-full  " style={{backgroundColor:`${black ? 'rgb(45, 55, 72)' : 'white'}`}}>
             <div className="team-box flex md:justify-between 
-             md:flex-row flex-col items-center  w-full ">
-              <div className=" hover:cursor-pointer image-box  md:w-1/4 w-full mb-4 md:m-0 flex justify-center items-center ">
+             md:flex-row flex-col items-center  w-full  ">
+              <div className=" hover:cursor-pointer image-box  md:w-1/4 w-full mb-4 md:m-0 flex justify-center  items-center ">
                 <div className="image rounded-full  flex justify-center items-center" style={{width:'160px',height:'160px'}}>
                 <img
                   className="rounded"
@@ -115,25 +115,25 @@ const Team = ({black}) => {
                 </div>
               </div>  
               <div className="content-box md:w-2/3 w-full  ">
-                <div className="heading-name ">
+                <div className="heading-name w-full ">
                   <h1
-                    className="text-xl font-bold mb-4 inline-block cursor-pointer  md:text-start text-center"
+                    className="text-xl font-bold w-full mb-4 inline-block cursor-pointer   md:text-start text-center"
                     style={{ color: "rgb(90, 103, 218)" }}
                   >
                     {value.name}
                   </h1>
                 </div>
-                <div className="content w-full  md:flex md:justify-between">
-                  <div className="intro md:w-3/4 md:text-start  w-full text-center ">
+                <div className="content w-full  md:flex md:justify-between  text-center ">
+                  <div className="intro md:w-3/4 md:text-start  text-center w-full  ">
                     <h2
-                      className=" font-semibold mb-4"
-                      style={{ color: "rgb(113, 128, 150)" }}
+                      className=" font-semibold mb-4  w-full"
+                      style={{ color: `${black ? 'rgb(226, 232, 240)':"rgb(113, 128, 150)"}` }}
                     >
                       {value.profession}
                     </h2>
                     <p
                       style={{
-                        color: "rgb(113, 128, 150)",
+                        color: `${black ? 'rgb(203, 213, 224)':"rgb(113, 128, 150)"}`,
                         lineHeight: "28.8px",
                       
                       }}
@@ -147,14 +147,14 @@ const Team = ({black}) => {
                   <div className="expertise w-1/2 md:w-1/3  ">
                     <h1
                       className="   font-semibold mb-4"
-                      style={{ color: "rgb(113, 128, 150)" }}
+                      style={{ color: `${black ? 'rgb(226, 232, 240)':"rgb(113, 128, 150)"}` }}
                     >
                       Expertise
                     </h1>
                     {value.expertise.map((value) => (
                       <p
                         className="my-2"
-                        style={{ color: "rgb(113, 128, 150)" }}
+                        style={{ color: `${black ? 'rgb(203, 213, 224)':"rgb(113, 128, 150)"}` }}
                       >
                         {value}
                       </p>
@@ -163,12 +163,12 @@ const Team = ({black}) => {
                   <div className="social-media w-1/2 md:w-1/4  ">
                     <h1
                       className="  font-semibold mb-4"
-                      style={{ color: "rgb(113, 128, 150)" }}
+                      style={{ color: `${black ? 'rgb(226, 232, 240)':"rgb(113, 128, 150)"}` }}
                     >
                       Social Media
                     </h1>
                     {value.socialMedia.map((value) => (
-                      <p className="my-2" style={{ color: "rgb(113, 128, 150)" }}>
+                      <p className="my-2" style={{ color: `${black ? 'rgb(203, 213, 224)':"rgb(113, 128, 150)"}` }}>
                         <i
                           className={value.icon}
                           style={{ color: value.color,marginRight:'0.7rem' }}

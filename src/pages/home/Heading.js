@@ -1,6 +1,7 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom'
 const   Heading = ({heading,black}) => {
+  let navigate = useNavigate();
   return (
     <>
       <div className="margin-top-container"></div>

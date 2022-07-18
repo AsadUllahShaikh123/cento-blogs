@@ -1,11 +1,10 @@
 import React from "react";
 import {useNavigate} from 'react-router-dom'
-const Card = ({ category,articleHeading,author,date,read,image,black,blogCategory,setBlogCategory }) => {
+const Card = ({ index, category,articleHeading,author,date,read,image,black,setBlogCategory }) => {
   let navigate = useNavigate()
   let handleRoute =()=>{
-    navigate(`${articleHeading}`)
-    setBlogCategory({category,articleHeading,author,date,read})
-    alert('helo')
+    navigate(`${index}`)
+    setBlogCategory(index)
   }
   return (
     <>

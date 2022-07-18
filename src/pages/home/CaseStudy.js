@@ -15,6 +15,7 @@ const CaseStudy = ({card,cards_without_photos,card2,black,blogCategory,setBlogCa
           <div className="blogs-card-content flex md:flex-nowrap flex-wrap">
             {card.map((value) => (
               <SingleCard
+                index = {value.index}
                 category={value.category}
                 articleHeading={value.articleHeading}
                 author={value.author}
@@ -29,7 +30,7 @@ const CaseStudy = ({card,cards_without_photos,card2,black,blogCategory,setBlogCa
             <div className="cards-without-images flex flex-col md:w-2/5 w-full">
                 {
                   cards_without_photos.map(value => 
-                    <CaseCard category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} image={value.image} black={black}/>
+                    <CaseCard index = {value.index} category ={value.category} articleHeading={value.articleHeading} author = {value.author} date ={value.date} read={value.read} image={value.image} black={black} setBlogCategory={setBlogCategory}/>
                     )
 
                     
@@ -37,6 +38,7 @@ const CaseStudy = ({card,cards_without_photos,card2,black,blogCategory,setBlogCa
             </div>
             {card2.map((value) => (
               <SingleCard
+                index = {value.index}
                 category={value.category}
                 articleHeading={value.articleHeading}
                 author={value.author}

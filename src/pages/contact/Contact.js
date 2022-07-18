@@ -17,7 +17,7 @@ const Contact = ({black}) => {
 ]
   return (
 
-    <div className="contact min-h-screen w-full " style={{backgroundColor:`${black?'#1A202C':'rgb(243 244 246)'}`}}>
+    <div className="contact min-h-screen w-full " style={{backgroundColor:`${black?'#1A202C':'rgb(243 244 246)'}`,border:'1px solid transparent'}}>
            <div className="margin-top" style={{marginTop:'32px',borderTop:'2px solid transparent'}}></div>
 
        <div className="contact-container mx-3 md:mx-36 flex justify-between py-8 md:py-16">
@@ -35,27 +35,27 @@ const Contact = ({black}) => {
             <div className="form mt-16 p-8 flex flex-wrap justify-between" style={{width:'100%',borderRadius:'8px',backgroundColor:`${black?'rgb(45, 55, 72)':'white'}`}}
             >
                 <div className="name-field md:w-48 w-full mr-2" >
-                  <label htmlFor="name">Name</label>
+                  <label htmlFor="name" style={{color:'rgb(113, 128, 150)'}}>Name</label>
                   <input type="text" style={{width:'100%',backgroundColor:`${black?'#718096':'rgb(226, 232, 240)'}`}} />
                 </div>
                 <div className="company-name md:w-48 w-full" >
-                  <label htmlFor="company-name" >Company Name</label>
+                  <label htmlFor="company-name" style={{color:'rgb(113, 128, 150)'}}>Company Name</label>
                   <input type="text" style={{width:'100%',backgroundColor:`${black?'#718096':'rgb(226, 232, 240)'}`}}/>
                 </div>
                 <div  className="email md:w-48 w-full" >
-                  <label htmlFor="email" >Email</label>
+                  <label htmlFor="email"style={{color: `${black ? 'rgb(203, 213, 224)':'rgb(113, 128, 150)'}`}} >Email</label>
                   <input type="email" placeholder='email@example.com' style={{width:'100%',backgroundColor:`${black?'#718096':'rgb(226, 232, 240)'}`}} />
                 </div>
                 <div className="phone-number md:w-48 w-full"  >
-                  <label htmlFor="number" >Phone Number</label>
+                  <label htmlFor="number" style={{color: `${black ? 'rgb(203, 213, 224)':'rgb(113, 128, 150)'}`}} >Phone Number</label>
                   <input type="text" placeholder='(XXX) XXX-XXXX' style={{width:'100%',backgroundColor:`${black?'#718096':'rgb(226, 232, 240)'}`}}/>
                 </div>
                 <div className="subject" style={{width:'100%'}} >
-                  <label htmlFor="subject" >Subject</label>
+                  <label htmlFor="subject" style={{color: `${black ? 'rgb(203, 213, 224)':'rgb(113, 128, 150)'}`}} >Subject</label>
                   <input type="text" style={{width:'100%',backgroundColor:`${black?'#718096':'rgb(226, 232, 240)'}`}}/>
                 </div>
                 <div className="message" style={{width:'100%'}}>
-                  <label htmlFor="message" >Your Message</label>
+                  <label htmlFor="message" style={{color: `${black ? 'rgb(203, 213, 224)':'rgb(113, 128, 150)'}`}} >Your Message</label>
                   <textarea type="text" style={{width:'100%',minHeight:'100px',backgroundColor:`${black?'#718096':'rgb(226, 232, 240)'}`}}/>
                 </div>
                 <div className="button">

@@ -1,17 +1,23 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const RelatedCards = ({cardData}) => {
+const RelatedCards = ({cardData,setBlogCategory,black}) => {
+  let navigate = useNavigate();
+  let setRoute=(index)=>{
+    navigate(`/index/${index}`)
+    setBlogCategory(index);
+  }
   return (
-    <div className="related-cards p-2">
+    <div className="related-cards p-2" onClick={()=> setRoute(cardData.index)}>
           <div className='articles'>
-            <article style={{borderLeft:'5px solid #a3bffa',backgroundColor:'white',borderRadius:'8px'}}>
+            <article style={{borderLeft:'5px solid #a3bffa',backgroundColor:`${black ? 'rgb(45, 55, 72)':'white'}`,borderRadius:'8px'}}>
               <div style={{padding:'16px',display:'flex',flexDirection:'column',justifyContent:'center'}}>
-                  <a href="#related" style={{fontWeight:'600',color:'rgb(45, 55, 72)'}}>{cardData.articleHeading}</a>
+                  <a href="#related" style={{fontWeight:'600',color:`${black ? 'rgb(237, 242, 247)':'rgb(45, 55, 72)' }`}}>{cardData.articleHeading}</a>
                   <div style={{display:'flex',alignItems:'center',width:'100%'}}>
                       <div style={{display:'flex',flexWrap:'wrap',
                       flex:'1',justifyContent:'space-between'}}>
                           <div>
-                            <a href="name" style={{color:'#718096',fontSize:'12px',fontWeight:'700'}}>
+                            <a href="name" style={{color:`${black ? 'rgb(160, 174, 192)':'#718096'}`,fontSize:'12px',fontWeight:'700'}}>
                               <strong >{cardData.author}</strong>
                             </a>
                           </div>

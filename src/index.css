@@ -40,6 +40,20 @@ label {
   
 }
 
+span {
+  color:#667eea
+}
+span.last{
+  color:rgb(113,128,150)
+}
+span:hover {
+  background-color: #667eea;
+  color:#fff;
+  border-radius: 9999px;
+}
+.link:hover {
+  color:rgb(102, 126, 234)
+}
 
 .fg--search button {
   background: transparent;

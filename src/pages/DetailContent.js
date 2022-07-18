@@ -1,6 +1,6 @@
 import React from "react";
 
-const DetailContent = ({image}) => {
+const DetailContent = ({image,black}) => {
   return (
     <div className="blog-detail w-full">
       <div className="image">
@@ -26,7 +26,7 @@ const DetailContent = ({image}) => {
             marginBottom: "1rem",
             fontSize: "24px",
             fontWeight: "700",
-            color: "rgb(45, 55, 72)",
+            color: `${black ? 'rgb(226, 232, 240)':"rgb(45, 55, 72)"}`,
           }}
         >
           Primo in altis pelle alumnae
@@ -36,7 +36,7 @@ const DetailContent = ({image}) => {
           style={{
             fontSize: "20px",
             fontWeight: "400px",
-            color: "rgb(74, 85, 104)",
+            color: `${black ? 'rgb(226, 232, 240)':"rgb(74, 85, 104)"}`,
             lineHeight: "36px",
             marginBottom: "2rem",
           }}
@@ -55,7 +55,7 @@ const DetailContent = ({image}) => {
           style={{
             fontSize: "20px",
             fontWeight: "400px",
-            color: "rgb(74, 85, 104)",
+            color: `${black ? 'rgb(226, 232, 240)':"rgb(74, 85, 104)"}`,
             lineHeight: "36px",
             marginBottom: "2rem",
           }}
@@ -73,7 +73,7 @@ const DetailContent = ({image}) => {
             listStyleType: "decimal",
             fontSize: "20px",
             fontWeight: "400px",
-            color: "rgb(74, 85, 104)",
+            color: `${black ? 'rgb(226, 232, 240)':"rgb(74, 85, 104)"}`,
             lineHeight: "36px",
           }}
         >
@@ -90,7 +90,7 @@ const DetailContent = ({image}) => {
             fontSize: "24px",
             fontWeight: "700",
             lineHeight: "31.92px",
-            color: "rgb(45, 55, 72)",
+            color: `${black ? "rgb(237, 242, 247)":"rgb(45, 55, 72)" }`,
             marginBottom: "16px",
           }}
         >
@@ -102,14 +102,14 @@ const DetailContent = ({image}) => {
           style={{
             fontSize: "20px",
             fontWeight: "400px",
-            color: "rgb(74, 85, 104)",
+            color:`${black ? "rgb(226, 232, 240)":"rgb(74, 85, 104)" }` ,
             lineHeight: "36px",
             marginBottom: "2rem",
           }}
         >
           Fraudem modo dare praeterque in pede, omnipotens specie spernitque
           rursus potentia.{" "}
-          <strong class="css-1ukrlb9">Carne placido quoque</strong> sed virgo
+          <strong style={{color:`${black && '#667eea'}`}} className="css-1ukrlb9">Carne placido quoque</strong> sed virgo
           prior illuc in clamat antiquique, agger pro audiat gurgite lacrimae;
           nec. In in quidque <em class="css-0">ducit</em> creaverat sitvs me
           relinquam longa, multaque Haemoniam, victoria!
@@ -134,14 +134,14 @@ const DetailContent = ({image}) => {
             style={{
               fontSize: "20px",
               fontWeight: "400px",
-              color: "rgb(74, 85, 104)",
+              color: `${black ? 'rgb(226, 232, 240)' : "rgb(74, 85, 104)"}`,
               lineHeight: "36px",
               marginBottom: "2rem",
             }}
           >
             Leni vacuus: non sociorum et aperto onerosus extrema Pagasaea
             tempore gemunt et facta posset. Caecum tauros, ferrataque Ulixis
-            pharetratae <strong class="css-1ukrlb9">aquarum</strong>
+            pharetratae <strong style={{color:`${black && '#667eea'}`}} class="css-1ukrlb9">aquarum</strong>
             Plura cum sua invitaque qui verba rerum Romanique Tethyn interit
             ungues trahens illi.
           </p>
@@ -152,7 +152,7 @@ const DetailContent = ({image}) => {
           style={{
             fontSize: "20px",
             fontWeight: "400px",
-            color: "rgb(74, 85, 104)",
+            color: `${black ? 'rgb(226, 232, 240)' : "rgb(74, 85, 104)"}`,
             lineHeight: "36px",
             marginBottom: "2rem",
           }}
@@ -171,15 +171,15 @@ const DetailContent = ({image}) => {
           style={{
             fontSize: "20px",
             fontWeight: "400px",
-            color: "rgb(74, 85, 104)",
+            color: `${black ? 'rgb(226, 232, 240)' : "rgb(74, 85, 104)"}`,
             lineHeight: "36px",
             marginBottom: "2rem",
           }}
         >
           Bacchae inultae omnia, Memnonides atque factaque, deus di vivos
-          quodque aditus. A <strong class="css-1ukrlb9">agmen</strong> vel
+          quodque aditus. A <strong style={{color:`${black && '#667eea'}`}} class="css-1ukrlb9">agmen</strong> vel
           intravit mandat, sacri et radicis iacuit,
-          <a href="http://extenuat-aeratis.com/" class="css-wa7nh6">
+          <a href="http://extenuat-aeratis.com/" style={{color:`${black && '#667eea'}`}} class="css-wa7nh6">
             tangentia
           </a>
           .
@@ -201,6 +201,7 @@ const DetailContent = ({image}) => {
                   marginRight: "1rem",
                   fontWeight: "600",
                   fontSize: "0.875rem",
+                  color:`${black ? 'rgb(226, 232, 240)':'rgb(113, 128, 150)'}`
                 }}
               >
                 Tags
@@ -212,8 +213,8 @@ const DetailContent = ({image}) => {
                   style={{
                     padding: "4px 16px",
                     margin: "0 4px 4px 0",
-                    backgroundColor: "#e2e8f0",
-                    color: "#718096",
+                    backgroundColor: `${black ? '#718096':"#e2e8f0"}`,
+                    color:`${black ? '#e2e8f0':"#718096"}`,
                     borderRadius: "8px",
                     fontSize: "12px",
                     display: "inline-block",
@@ -228,8 +229,8 @@ const DetailContent = ({image}) => {
                   style={{
                     padding: "4px 16px",
                     margin: "0 4px 4px 0",
-                    backgroundColor: "#e2e8f0",
-                    color: "#718096",
+                    backgroundColor: `${black ? '#718096':"#e2e8f0"}`,
+                    color:`${black ? '#e2e8f0':"#718096"}`,
                     borderRadius: "8px",
                     fontSize: "12px",
                     display: "inline-block",
@@ -244,8 +245,8 @@ const DetailContent = ({image}) => {
                   style={{
                     padding: "4px 16px",
                     margin: "0 4px 4px 0",
-                    backgroundColor: "#e2e8f0",
-                    color: "#718096",
+                    backgroundColor: `${black ? '#718096':"#e2e8f0"}`,
+                    color:`${black ? '#e2e8f0':"#718096"}`,
                     borderRadius: "8px",
                     fontSize: "12px",
                     display: "inline-block",
@@ -257,12 +258,14 @@ const DetailContent = ({image}) => {
                 </a>
               </div>
             </div>
-            <div className="media-links w-1/2 flex  justify-end">
+            <div className="media-links w-1/2  flex   justify-end items-center">
               <h2
                 style={{
                   marginRight: "0.25rem",
                   fontWeight: "600",
                   fontSize: "0.875rem",
+                  color:`${black ? 'rgb(226, 232, 240)':'rgb(113, 128, 150)'}`
+
                 }}
               >
                 Share
@@ -271,8 +274,13 @@ const DetailContent = ({image}) => {
                 style={{
                   border: "3px solid transparent",
                   borderRadius: "9999px",
-                  width: "46px",
-                  height: "46px",
+                  width: "50px",
+                  height: "50px",
+                  margin:'0 0.3rem',
+                  display:'flex',
+                  alignItems:'center',
+                  justifyContent:'center', 
+                  
                 }}
               >
                 <button>
@@ -291,7 +299,11 @@ const DetailContent = ({image}) => {
                 </button>
               </span>
 
-              <span style={{ width: "46px", height: "46px" }}>
+              <span style={{ width: "46px", height: "46px",margin:'0 0.3rem',
+              display:'flex',
+              alignItems:'center',
+              justifyContent:'center'
+ }}>
                 <button>
                   <svg
                     style={{ width: "24px", height: "24px" }}
@@ -308,7 +320,9 @@ const DetailContent = ({image}) => {
                 </button>
               </span>
 
-              <span style={{ width: "46px", height: "46px" }}>
+              <span style={{ width: "46px", height: "46px",margin:'0 0.3rem',display:'flex',
+                  alignItems:'center',
+                  justifyContent:'center' }}>
                 <button>
                   <svg
                     style={{ width: "24px", height: "24px" }}
@@ -324,7 +338,11 @@ const DetailContent = ({image}) => {
                   </svg>
                 </button>
               </span>
-              <span style={{ width: "46px", height: "46px" }}>
+              <span className="last" style={{ width: "46px", height: "46px",margin:'0 0.3rem',display:'flex',
+                  alignItems:'center',
+                  justifyContent:'center',
+                  
+                   }}>
                 <button>
                   <svg
                     style={{ width: "24px", height: "24px" }}
@@ -361,7 +379,6 @@ const DetailContent = ({image}) => {
               width: "100%",
               margin: "0px auto",
               display: "block",
-
               border: "none !important",
             }}
           ></iframe>
@@ -369,19 +386,19 @@ const DetailContent = ({image}) => {
 
         <div
           className="previous-next"
-          style={{ margin: "2rem -2rem -2rem -2rem",backgroundColor:'rgb(226, 232, 240)' }}
+          style={{ margin: "2rem -2rem -2rem -2rem",backgroundColor:`${black ? '#718096': 'rgb(226, 232, 240)'}` }}
         >
           <div style={{padding:'2rem',display:'flex',justifyContent:'space-between'}}>
             
             <div className="previous w-1/2" >
-              <div style={{ marginBottom: "8px",color:'rgb(113, 128, 150)' }}>Previous Article</div>
-              <a href="#previous" style={{fontWeight:'600',color:'rgb(45, 55, 72)'}}>
+              <div style={{ marginBottom: "8px",color:`${black ? 'rgb(226,232,240)':'rgb(113, 128, 150)'}` }}>Previous Article</div>
+              <a href="#previous" style={{fontWeight:'600',color:`${black ? 'rgb(237,242,247)':'rgb(45, 55, 72)' }`}}>
                 A Marketer's Guide to Price Comparsion Websites
               </a>
             </div>
             <div className="next w-1/2 text-right">
-              <div style={{ marginBottom: "8px",color:'rgb(113, 128, 150)' }}>Next Article</div>
-              <a href="#next" style={{fontWeight:'600',color:'rgb(45, 55, 72)'}}>
+              <div style={{ marginBottom: "8px",color:`${black ? 'rgb(226,232,240)':'rgb(113, 128, 150)'}` }}>Next Article</div>
+              <a href="#next" style={{fontWeight:'600',color:`${black ? 'rgb(237,242,247)':'rgb(45, 55, 72)' }`}}>
                 Markdown Language Sample Blog Post Styling
               </a>
             </div>

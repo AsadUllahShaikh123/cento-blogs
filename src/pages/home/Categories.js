@@ -1,8 +1,9 @@
 import React from 'react'
-const Categories = ({black}) => {
+import {useNavigate} from 'react-router-dom'
+const Categories = ({black,setBlogCategory}) => {
   let boxes =[
     {
-      category:'Case Studies',
+      category:'CaseStudies',
       icon:'far fa-file'
     },
     {
@@ -11,13 +12,19 @@ const Categories = ({black}) => {
     },
     {
       category:'Management',
-      icon:'fas fa-tasks'
+      icon:'fas fa-tasks' 
     },
     {
       category:'Advertisement',
       icon:'fas fa-ad'
     }
   ]
+  let navigate = useNavigate();
+  let handleRoute=(category)=>{
+
+    navigate(`${category}`)  
+    
+  }
   return (
     <>
       <div className="categories overflow-x-auto">
@@ -26,7 +33,8 @@ const Categories = ({black}) => {
               <div className="category-boxes flex justify-between overflow-x-auto">
                 {
                   boxes.map(box => 
-                    <div className="box w-23 m-2 inline-block text-center  rounded-2xl" style={{backgroundColor:`${black ? 'rgb(45, 55, 72)':'white'}`}}>
+                    <div className="box w-23 m-2 inline-block text-center  rounded-2xl" style={{backgroundColor:`${black ? 'rgb(45, 55, 72)':'white'}`}} 
+                    onClick={()=> handleRoute(box.category)}>
                       <div className="icon">
                         <i className={`icon ${box.icon} text-3xl pt-4 text-blue-500`}  />
                       </div>

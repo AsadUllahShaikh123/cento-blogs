@@ -2,16 +2,31 @@ import React from "react";
 import data from "../data";
 import RelatedCards from "./home/RelatedCards";
 
-const RelatedBlogs = ({blogCategory}) => {
+const RelatedBlogs = ({index,setBlogCategory,black}) => {
+
+
+  let filtered = [];
+
+  data.map(values => {
+    for(let key in values){
+      let filterArray =  values[key].filter(value => value.index === index )
+      if(filterArray.length > 0){
+         filtered = [...filtered,filterArray]
+      }      
+    }
+  }
+    )
+  
+  let category =filtered[0][0].category; 
   let array = data[0]
   let relatedCards =[];
-  if(blogCategory.category === 'Case Studies')
+  if(category === 'Case Studies')
       relatedCards = array.case_studies.slice(0,7);
-  else if(blogCategory.category === 'Innovation')
+  else if(category === 'Innovation')
       relatedCards = array.innovations.slice(0,7);
-  else if(blogCategory.category === 'Management')
+  else if(category === 'Management')
       relatedCards = array.management.slice(0,7);
-  else if(blogCategory.category === 'Advertising')
+  else if(category === 'Advertising')
       relatedCards = array.advertising.slice(0,7)
   
   return (
@@ -22,7 +37,7 @@ const RelatedBlogs = ({blogCategory}) => {
           className="image-container"
           style={{
             padding: "32px",
-            backgroundColor: "white",
+            backgroundColor: `${black ? 'rgb(45, 55, 72)':'white'}`,
             borderRadius: "8px",
             height: "371px",
           }}
@@ -55,16 +70,16 @@ const RelatedBlogs = ({blogCategory}) => {
               style={{
                 fontSize: "20px",
                 fontWeight: "700",
-                color: "rgb(45, 55, 72)",
+                color: `${black ? 'rgb(237, 242, 247)':"rgb(45, 55, 72)"}` ,
               }}
             >
-              {blogCategory.author}
+              {filtered[0][0].author}
             </a>
             <h2
               style={{
                 marginBottom: "16px",
                 fontWeight: "600",
-                color: "rgb(113, 128, 150)",
+                color: `${black ? 'rgb(226, 232, 240)':"rgb(113, 128, 150)"}` ,
               }}
             >
               Product Designer
@@ -170,7 +185,7 @@ const RelatedBlogs = ({blogCategory}) => {
             style={{
               fontSize: "24px",
               fontWeight: "700",
-              color: "rgb(113, 128, 150)",
+              color: `${black ? ' rgb(226, 232, 240)':'rgb(113, 128, 150)' }`,
               
             }}
           >
@@ -187,7 +202,7 @@ const RelatedBlogs = ({blogCategory}) => {
           className="content-box"
           style={{
             padding: "32px",
-            backgroundColor: "white",
+            backgroundColor: `${black ? 'rgb(45, 55, 72)':'white'}`,
             borderRadius: "8px",
           }}
         >
@@ -200,13 +215,13 @@ const RelatedBlogs = ({blogCategory}) => {
                 justifyContent: "center",
                 borderRadius: "9999px",
                 marginRight: "0.5rem",
-                backgroundColor: "#edf2f7",
+                backgroundColor: `${black ? 'none':"#edf2f7"}`,
                 color: "rgb(102, 126, 234)",
               }}
             >
               1
             </div>
-            <div style={{ fontWeight: "400", color: "#718096", flex: "1" }}>
+            <div style={{ fontWeight: "400", color: `${black ? '#e2e8f0':"#718096"}` , flex: "1" }}>
               Primo in altis pelle alumnae
             </div>
           </a>
@@ -219,13 +234,13 @@ const RelatedBlogs = ({blogCategory}) => {
                 justifyContent: "center",
                 borderRadius: "9999px",
                 marginRight: "0.5rem",
-                backgroundColor: "#edf2f7",
+                backgroundColor: `${black ? 'none':"#edf2f7"}`,
                 color: "rgb(102, 126, 234)",
               }}
             >
               2
             </div>
-            <div style={{ fontWeight: "400", color: "#718096", flex: "1" }}>
+            <div style={{ fontWeight: "400", color: `${black ? '#e2e8f0':"#718096"}`, flex: "1" }}>
               Adidit neve que versa
             </div>
           </a>
@@ -241,7 +256,7 @@ const RelatedBlogs = ({blogCategory}) => {
               style={{
                 fontSize: "24px",
                 fontWeight: "700",
-                color: "rgb(113, 128, 150)",
+                color: `${black ? ' rgb(226, 232, 240)':'rgb(113, 128, 150)' }`,
               }}
             >
               Related Posts
@@ -254,7 +269,7 @@ const RelatedBlogs = ({blogCategory}) => {
         <div className="related-posts-blogs" style={{margin:'-8px'}}>
               {
                 relatedCards.map(values => 
-                    <RelatedCards cardData={values} />
+                    <RelatedCards  cardData={values} setBlogCategory={setBlogCategory} black={black} />
                   )
               }
               

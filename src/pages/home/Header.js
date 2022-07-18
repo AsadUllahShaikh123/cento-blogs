@@ -11,7 +11,7 @@ const Header = ({black,setBlack}) => {
   }
   return (
     <>
-      <div className='header' style={{backgroundColor:`${black ? 'rgb(45, 55, 72)' :'white'}`}}>
+      <div className='header relative' style={{backgroundColor:`${black ? 'rgb(45, 55, 72)' :'white'}`}}>
         <header className="md:w-1140 w-full px-3 md:ml-auto md:mr-auto ">
           <div className="content flex flex-auto items-center justify-between md:py-8 py-5">
             
@@ -53,9 +53,9 @@ const Header = ({black,setBlack}) => {
 
             {/* Links  */}
             <div className=" hidden links md:flex w-1/3 justify-end ">
-              <p className="mx-2 p-1" onClick={()=> navigate('/')} >Home</p>
-              <p className="mx-2 p-1" onClick={()=> navigate('/team')}>Our Team</p>
-              <p className="mx-2 p-1" onClick={()=> navigate('/contact')}>Contact</p>
+              <p className="mx-2 p-1 link"  onClick={()=> navigate('/')} >Home</p>
+              <p className="mx-2 p-1 link"  onClick={()=> navigate('/team')}>Our Team</p>
+              <p className="mx-2 p-1 link"  onClick={()=> navigate('/contact')}>Contact</p>
             </div>
 
             {/* Links on small screen */}
@@ -107,6 +107,7 @@ const Header = ({black,setBlack}) => {
             
           </div>
         </header>
+        
       </div>
     </>
   );
