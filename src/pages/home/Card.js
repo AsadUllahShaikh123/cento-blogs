@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom'
 const Card = ({ index, category,articleHeading,author,date,read,image,black,setBlogCategory }) => {
   let navigate = useNavigate()
   let handleRoute =()=>{
-    navigate(`${index}`)
+    navigate(`/category/${index}`)
     setBlogCategory(index)
   }
   return (

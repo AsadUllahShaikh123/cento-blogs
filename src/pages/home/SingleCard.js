@@ -15,11 +15,11 @@ const SingleCard = ({
   console.log(isCategory,'isCategory')
   let navigate = useNavigate();
   let setRoute=()=>{
-    if(isCategory)
-      navigate(`/category/${index}`)   
-    else 
-      navigate(`${index}`)
-      
+    // if(isCategory)
+    //   navigate(`/category/${index}`)   
+    // else 
+    //   navigate(`${index}`)
+      navigate(`/category/${index}`)
     setBlogCategory(index) 
     
   }

@@ -3,11 +3,16 @@ import {useNavigate} from 'react-router-dom'
 const Header = ({black,setBlack}) => {
   
   let [mode,setMode] = useState(true);
+  let [sidebar,setSidebar] = useState(false)
   let navigate = useNavigate();
 
   let handleClick=()=>{
     setMode(!mode)
     setBlack(!black)
+  }
+  let handleRoute=(route)=>{
+    navigate(route)
+    setSidebar(!sidebar)
   }
   return (
     <>
@@ -79,7 +84,7 @@ const Header = ({black,setBlack}) => {
               <svg  style={{width:'100%',height:'100%'}} stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
               </span>
               </button>
-              <button  className='bg-gray-100' style={{color:'#718096',borderRadius:'50%',width:'44px',height:'44px',padding:'8px'}}> 
+              <button onClick={()=> setSidebar(!sidebar)} className='bg-gray-100'  style={{color:'#718096',borderRadius:'50%',width:'44px',height:'44px',padding:'8px'}}> 
                <span style={{width:'24px',height:'24px'}}>
               <svg style={{width:'100%',height:'100%'}} stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
               </span>
@@ -107,7 +112,20 @@ const Header = ({black,setBlack}) => {
             
           </div>
         </header>
-        
+        <div className={`${sidebar ? 'fixed':'hidden'}  top-0 md:hidden w-full`}>
+          <div className="sidebar flex">
+            <div className="cross w-1/3 bg-black opacity-50 text-white">
+                <button onClick={()=> setSidebar(!sidebar)}>X</button>
+            </div>
+            <div className="side-menubar w-2/3">
+               <ul>
+                <li onClick={()=> handleRoute('/')}>Home</li>
+                <li onClick={()=> handleRoute('/contact')}>Contact</li>
+                <li onClick={()=> handleRoute('/team')}>Team</li>
+               </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

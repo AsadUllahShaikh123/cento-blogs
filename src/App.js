@@ -22,10 +22,8 @@ const App = () => {
         <Route path='/' element={<Home black={black} blogCategory={blogCategory} setBlogCategory={setBlogCategory}/>}/>
         <Route path='/contact' element={<Contact black={black}/>}/>
         <Route path='/team' element={<Team black={black} />}/>
-        <Route path='/:index' element={<Blog index={blogCategory} setBlogCategory={setBlogCategory} black={black} />}/>
-        <Route path='/index/:index' element={<Blog index={blogCategory} setBlogCategory={setBlogCategory} black={black} />}/>
-        {/* <Route path='/:category'  element = {<CategoriesBlogs black={black} index={blogCategory} setBlogCategory={setBlogCategory}/>}/> */}
-        <Route path="/category/:index" element={<Blog index={blogCategory} setBlogCategory={setBlogCategory} />}/>
+        <Route path='/:category'  element = {<CategoriesBlogs black={black} index={blogCategory} setBlogCategory={setBlogCategory}/>}/>
+        <Route path="/category/:index" element={<Blog index={blogCategory} setBlogCategory={setBlogCategory} black={black} />}/>
       </Routes>
       <Footer black={black}/>
     </>

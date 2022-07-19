@@ -11,7 +11,7 @@ const MainContent = ({black,setBlogCategory}) => {
   let image = [image1, image2, image3];
   let advertise = data[0].advertising.slice(0,4)
   let handleRoute =(index)=>{
-    navigate(`${index}`)
+    navigate(`/category/${index}`)
     setBlogCategory(index);
   }
   return (

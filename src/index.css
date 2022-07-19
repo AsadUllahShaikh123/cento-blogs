@@ -211,7 +211,12 @@ span:hover {
 }
 
 
-
+.contact-button:hover{
+  background-color: rgb(102, 126, 234);
+}
+.contact-button:hover .icon{
+  color: white;
+}
 
 
 

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 const RelatedCards = ({cardData,setBlogCategory,black}) => {
   let navigate = useNavigate();
   let setRoute=(index)=>{
-    navigate(`/index/${index}`)
+    navigate(`/category/${index}`)
     setBlogCategory(index);
   }
   return (
