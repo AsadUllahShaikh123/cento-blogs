@@ -110,11 +110,11 @@ const Footer = ({black}) => {
 
           {data.map((value) => (
             // boorororo
-            <div className="links-section  ml-auto mr-auto md:m-0 md:h-40 " >
+            <div className="links-section  ml-auto mr-auto md:m-0 md:h-40 w-full md:w-auto" >
               <p className="hidden md:block md:mb-5" style={{ color:`${black ? 'white':'black'}`, fontWeight: "600" }} >{value.para}</p>
               <div className="flex justify-center md:flex " >
               <div
-                className="flex md:flex-col px-1 py-2 md:p-0 md:justify-center  w-full"
+                className="flex  md:flex-col px-1 py-2 md:p-0 md:justify-center  w-full"
                
               >
                 {value.links.map((value) => (
