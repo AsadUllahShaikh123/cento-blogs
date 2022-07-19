@@ -29,7 +29,7 @@ const Hero = ({black,blogCategory,setBlogCategory}) => {
     <>
       <Categories black={black} setBlogCategory={setBlogCategory}/>
       <MainContent black={black} setBlogCategory={setBlogCategory}/>
-      <Heading heading={"Advertising"}/>
+      <Heading heading={"Advertising"} black={black}/>
       <BlogCards singleCardData={advertise} cardData={adWithoutImages} black={black}  blogCategory={blogCategory} setBlogCategory={setBlogCategory}/>
       <Banner black={black}/>      
       <Heading heading={"Case Studies"} black={black} />

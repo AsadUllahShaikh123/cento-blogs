@@ -188,11 +188,9 @@ const DetailContent = ({image,black}) => {
         <div className="tags">
           <hr style={{ margin: "2rem 0" }} />
           <div
-            className="links"
+            className="links tags-link"
             style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              
             }}
           >
             <div className="categories-tags w-1/2 flex content-center ">

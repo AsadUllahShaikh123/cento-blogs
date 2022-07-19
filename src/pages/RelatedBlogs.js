@@ -1,12 +1,13 @@
 import React from "react";
+import {useNavigate} from 'react-router-dom'
 import data from "../data";
 import RelatedCards from "./home/RelatedCards";
 
 const RelatedBlogs = ({index,setBlogCategory,black}) => {
 
-
+  let navigate = useNavigate();
   let filtered = [];
-
+  
   data.map(values => {
     for(let key in values){
       let filterArray =  values[key].filter(value => value.index === index )
@@ -65,8 +66,8 @@ const RelatedBlogs = ({index,setBlogCategory,black}) => {
                 }}
               />
             </div>
-            <a
-              href="name"
+            <button
+              onClick={()=> navigate('/team')}
               style={{
                 fontSize: "20px",
                 fontWeight: "700",
@@ -74,7 +75,7 @@ const RelatedBlogs = ({index,setBlogCategory,black}) => {
               }}
             >
               {filtered[0][0].author}
-            </a>
+            </button>
             <h2
               style={{
                 marginBottom: "16px",

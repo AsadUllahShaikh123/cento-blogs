@@ -31,7 +31,7 @@ label {
 .links p 
 {
   font-weight: 700;
-  color:#718096
+  
 }
 
 .fg--search {
@@ -41,13 +41,13 @@ label {
 }
 
 span {
-  color:#667eea
+  /* color:#667eea */
 }
 span.last{
   color:rgb(113,128,150)
 }
 span:hover {
-  background-color: #667eea;
+  /* background-color: #667eea; */
   color:#fff;
   border-radius: 9999px;
 }
@@ -218,12 +218,83 @@ span:hover {
   color: white;
 }
 
+.blogs-heading h1 {
+  line-height: 66.8px;
+}
 
+.heading-margin-top{
+  margin: 32px 0;
+}
+
+.view-more button
+{
+  color: #718096;
+  background-color: #e2e8f0;
+}
+.view-more button:hover{
+  color:rgb(226, 232, 240);
+  background-color:rgb(113, 128, 150) ;
+}
+
+.tags-link
+{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+.light-mode-button:hover 
+{
+  background-color: rgb(102, 126, 234);
+}
+.dark-mode 
+{
+  background-color: transparent;
+  color:#c3c9cf
+}
+.light-mode 
+{
+  background-color: #EDF2F7;
+}
+.light-mode-svg {
+  color:#c3c9cf;
+}
+.dark-mode-svg{
+  color:#c3c9cf;
+}
+
+.light-mode-button:hover .dark-mode-svg{
+  color:white;
+} 
+.light-mode-button:hover .light-mode-svg  {
+  color:white;
+}
+
+
+.dark-link 
+{
+  color:#e2e8f0;
+}
+.light-link 
+{
+  color:#718096
+}
+
+.main-menu li:hover 
+{
+  cursor: pointer;
+  color: rgb(102, 126, 234);
+}
 
 
 
 
 @media (max-width:768px){
+  .tags-link 
+  {
+   display: block;
+  }
   .backgroundImage{
     background-image: none;
     padding: 17px;
@@ -265,4 +336,17 @@ span:hover {
   .banner-padding{
     padding:0 13.6px;
   }
+  .blogs-heading h1 {
+    line-height:33.915px ;
+  }
+  .heading-margin-top{
+    margin : 16px 0;
+  }
+  .description{
+    font-size: 13.3px;
+  }
+   .red {
+   color  : rgb(245, 101, 101);
+  }
+  
 }

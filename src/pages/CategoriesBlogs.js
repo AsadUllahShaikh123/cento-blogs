@@ -27,7 +27,7 @@ const CategoriesBlogs = ({black,index,setBlogCategory}) => {
     <>
       <div
         className="blog-cards"
-        style={{ backgroundColor: "rgb(248, 248, 248)" }}
+        style={{ backgroundColor: `${black ? 'rgb(26, 32, 44)': "rgb(248, 248, 248)"}`  }}
       >
         <div className="margin-top mb-16 w-full border-t-2 border-transparent"></div>
         <div className="blog-cards-margin md:w-1140 w-full ml-auto mr-auto px-8">

@@ -69,6 +69,7 @@ const Subscribe = ({black}) => {
                   padding: "1rem",
                   color: "#718096",
                   backgroundColor: "rgb(226, 232, 240)",
+                  outline:'none'
                 }}
               />
             </div>

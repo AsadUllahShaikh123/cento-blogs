@@ -38,7 +38,7 @@ const Categories = ({black,setBlogCategory}) => {
                       <div className="icon">
                         <i className={`icon ${box.icon} text-3xl pt-4 text-blue-500`}  />
                       </div>
-                      <h1 style={{fontWeight:'600',padding:'16px',color:'rgb(113, 128, 150)'}}>{box.category}</h1>
+                      <h1 style={{fontWeight:'600',padding:'16px',color:`${black ?'rgb(226, 232, 240)': 'rgb(113, 128, 150)'}`}}>{box.category}</h1>
                     </div>
                     )
                 } 

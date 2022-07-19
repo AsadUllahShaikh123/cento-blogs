@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Header = ({ black, setBlack }) => {
   let [mode, setMode] = useState(true);
   let [sidebar, setSidebar] = useState(false);
+  let [dialogOpen,setDialogOpen] = useState(false)
   let navigate = useNavigate();
 
   let handleClick = () => {
@@ -45,6 +46,7 @@ const Header = ({ black, setBlack }) => {
                 <i class="fa fa-search" style={{ color: "#718096" }}></i>
               </button>
               <input
+                onClick={()=> setDialogOpen(!dialogOpen)}
                 type="text"
                 className="w-full text-base h-10 px-4"
                 placeholder="Discover news, articles and more"
@@ -59,25 +61,30 @@ const Header = ({ black, setBlack }) => {
 
             {/* Links  */}
             <div className=" hidden links md:flex w-1/3 justify-end ">
-              <p className="mx-2 p-1 link" onClick={() => navigate("/")}>
+              <p className={`mx-2 p-1 link ${black ? 'dark-link':'light-link'}`} onClick={() => navigate("/")} >
                 Home
               </p>
-              <p className="mx-2 p-1 link" onClick={() => navigate("/team")}>
+              <p className={`mx-2 p-1 link ${black ? 'dark-link':'light-link'}`} onClick={() => navigate("/team")} >
                 Our Team
               </p>
-              <p className="mx-2 p-1 link" onClick={() => navigate("/contact")}>
+              <p className={`mx-2 p-1 link ${black ? 'dark-link':'light-link'}`} onClick={() => navigate("/contact")}>
                 Contact
               </p>
             </div>
 
+
+
+
             {/* Links on small screen */}
 
             <div className=" md:hidden links flex w-1/3 justify-between items-center">
+
+            
+              {/* Light Mode Dark Mode Button  */}
               <button
-                onClick={() => setMode(!mode)}
-                className="bg-gray-100"
-                style={{
-                  color: "#718096",
+                onClick={() => handleClick()}
+                className={`light-mode-button ${black ? 'dark-mode':'light-mode'}`}
+                style={{                  
                   borderRadius: "50%",
                   width: "44px",
                   height: "44px",
@@ -87,7 +94,8 @@ const Header = ({ black, setBlack }) => {
                 {mode ? (
                   <span style={{ width: "24", height: "24px" }}>
                     <svg
-                      style={{ width: "100%", height: "100%" }}
+                      className={`${black ? 'dark-mode-svg':'light-mode-svg'}`}
+                      style={{ width: "100%", height: "100%",}}
                       stroke="currentColor"
                       fill="currentColor"
                       stroke-width="0"
@@ -102,6 +110,7 @@ const Header = ({ black, setBlack }) => {
                 ) : (
                   <span style={{ width: "24", height: "24px" }}>
                     <svg
+                     className={`${black ? 'dark-mode-svg':'light-mode-svg'}`}
                       style={{ width: "100%", height: "100%" }}
                       stroke="currentColor"
                       fill="currentColor"
@@ -118,10 +127,10 @@ const Header = ({ black, setBlack }) => {
                 )}
               </button>
 
+                  {/* Search Button  */}
               <button
-                className="bg-gray-100"
+                className={`light-mode-button ${black ? 'dark-mode':'light-mode'}`}
                 style={{
-                  color: "#718096",
                   borderRadius: "50%",
                   width: "44px",
                   height: "44px",
@@ -130,6 +139,7 @@ const Header = ({ black, setBlack }) => {
               >
                 <span style={{ width: "24", height: "24px" }}>
                   <svg
+                   className={`${black ? 'dark-mode-svg':'light-mode-svg'}`}
                     style={{ width: "100%", height: "100%" }}
                     stroke="currentColor"
                     fill="currentColor"
@@ -143,11 +153,12 @@ const Header = ({ black, setBlack }) => {
                   </svg>
                 </span>
               </button>
+
+              {/* Hamburger Button  */}
               <button
                 onClick={() => setSidebar(!sidebar)}
-                className="bg-gray-100"
+                className={`light-mode-button ${black ? 'dark-mode':'light-mode'}`}
                 style={{
-                  color: "#718096",
                   borderRadius: "50%",
                   width: "44px",
                   height: "44px",
@@ -156,7 +167,8 @@ const Header = ({ black, setBlack }) => {
               >
                 <span style={{ width: "24px", height: "24px" }}>
                   <svg
-                    style={{ width: "100%", height: "100%" }}
+                    className={`${black ? 'dark-mode-svg':'light-mode-svg'}`}
+                    style={{ width: "100%", height: "100%"}}
                     stroke="currentColor"
                     fill="currentColor"
                     stroke-width="0"
@@ -185,11 +197,11 @@ const Header = ({ black, setBlack }) => {
                     width: "21px",
                     height: "21px",
                     display: "inline-block",
-                    backgroundColor: "white",
+                    // backgroundColor: "white",
                     borderRadius: "50%",
                     border: "none",
                   }}
-                ></span>
+                > </span>
 
                 {mode ? (
                   <svg
@@ -221,6 +233,12 @@ const Header = ({ black, setBlack }) => {
             </div>
           </div>
         </header>
+
+
+
+
+
+        {/* Responsive Side Bar fixed Side Bar */}
         <div
           className={`${
             sidebar ? "fixed" : "hidden"
@@ -244,7 +262,7 @@ const Header = ({ black, setBlack }) => {
             >
               <div className="p-12">
                 <h1 className="text-2xl font-black">Main Menu</h1>
-                <ul>
+                <ul className="main-menu">
                   <li className="my-4 text-xl" onClick={() => handleRoute("/")}>
                     Home
                   </li>
@@ -258,6 +276,13 @@ const Header = ({ black, setBlack }) => {
               </div>
             </div>
           </div>
+        </div>
+
+
+
+        {/* Dialog box */}
+        <div className="dialog-box">
+          
         </div>
       </div>
     </>

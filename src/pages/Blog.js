@@ -36,19 +36,19 @@ const Blog = ({index,setBlogCategory,black}) => {
       <div className="blogs" style={{ backgroundColor: `${black ? 'rgb(26, 32, 44)' :"rgb(248, 248, 248)"}` ,border:'1px solid transparent' }}>
           
         <div
-          className="margin-top"
-          style={{ margin: "32px 0", border: "2px solid transparent" }}
+          className="heading-margin-top"
+          style={{ border: "2px solid transparent" }}
         ></div>
         <div className="blogs-heading-container md:w-1140 w-full ml-auto mr-auto px-8">
           <div className="blogs-heading">
             <h1
-              style={{ lineHeight: "63.8px",color:`${black? 'rgb(237, 242, 247)':'rgb(45, 55, 72)'}` }}
-              class="text-4xl lg:text-5xl mb-4  text-heading  font-black"
+              style={{ color:`${black? 'rgb(237, 242, 247)':'rgb(45, 55, 72)'}` }}
+              class="text-3xl lg:text-5xl mb-4  text-heading  font-black"
             >
               {articleHeading}
              
             </h1>{" "}
-            <div className="description flex">
+            <div className="description flex flex-wrap ">
               <div style={{color:`${black ? 'rgb(226, 232, 240)':' rgb(113, 128, 150)'}`}}>
                 By
                 <a href="#blog">
@@ -62,8 +62,8 @@ const Blog = ({index,setBlogCategory,black}) => {
                 </a>
               </div>
               <div className="dot" style={{color:`${black ? 'rgb(226, 232, 240)':' rgb(113, 128, 150)'}`}}>April 16, 2020</div>
-              <div className="dot" style={{color:`${black ? 'rgb(226, 232, 240)':' rgb(113, 128, 150)'}`}}>
-                <strong>1 min read </strong>
+              <div className="dot-red" style={{color:`${black ? 'rgb(226, 232, 240)':' rgb(113, 128, 150)'}`}}>
+                <strong className="red">1 min read </strong>
               </div>
             </div>
           </div>
