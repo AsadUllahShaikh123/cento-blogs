@@ -1,5 +1,6 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Team = ({black}) => {
   let teamData = [
     {
@@ -78,13 +79,19 @@ const Team = ({black}) => {
       ],
     },
   ];
+  useEffect(()=>{
+    AOS.init({
+      duration:750
+    })
+    AOS.refresh()
+  })
   return (
   <>
     <div className="team flex  flex-col flex-1" style={{ backgroundColor: `${black ? 'rgb(26, 32, 44)':"rgb(248, 248, 248)"}` }}>
     <div className="margin-top" style={{marginTop:'32px',border:'2px solid transparent'}}></div>
       <div className="team-container md:mx-32 mx-4">
         {/* Heading */}
-        <div className="heading mb-8">
+        <div className="heading mb-8" data-aos="fade-down" data-aos-delay="0">
           <h1 className="mb-2" style={{fontSize:'48px',fontWeight:'900',color:`${black ? 'rgb(237, 242, 247)':'rgb(45, 55, 72)'}`}}>Team Members</h1>
           <p style={{fontSize:'20px',color: `${black ? 'rgb(226, 232, 240)':'rgb(113, 128, 150)'}`}}>
             FlexiBlog theme comes with a pre-made contact form component.You can
@@ -97,7 +104,7 @@ const Team = ({black}) => {
         {/* Cards/boxes  */}
         
 
-        
+        <div data-aos="fade-up" data-aos-delay="0">
         {teamData.map((value) => (
           <>
           <div className="main-box rounded-lg px-4 py-6 mb-4 w-full  " style={{backgroundColor:`${black ? 'rgb(45, 55, 72)' : 'white'}`}}>
@@ -185,6 +192,7 @@ const Team = ({black}) => {
 
           </>
         ))}
+        </div>
       </div>
       <div className="margin-top" style={{marginTop:'128px',border:'2px solid transparent'}}></div>
     </div>

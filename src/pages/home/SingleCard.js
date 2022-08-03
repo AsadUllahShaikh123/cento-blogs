@@ -26,7 +26,7 @@ const SingleCard = ({
   return (
     <>
       <div
-        className="single-card md:w-1/3 w-full p-2"
+        className="single-card md:w-1/3 w-full p-2 self-stretch"
         onClick={()=> setRoute()}
       >
         <div className="single-card-content  rounded-lg "
@@ -63,6 +63,8 @@ const SingleCard = ({
               color: `${black ? 'rgb(237, 242, 247)':"rgb(45, 55, 72)" }`,
               marginBottom: "16px",
               display: "flex",
+              maxHeight:'3em',
+              overflow:'hidden'
             }}
           >
             {articleHeading}

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Header = ({ black, setBlack }) => {
   let [mode, setMode] = useState(true);
   let [sidebar, setSidebar] = useState(false);
-  let [dialogOpen,setDialogOpen] = useState(false)
+  let [isDialogOpen,setIsDialogOpen] = useState(false)
   let navigate = useNavigate();
 
   let handleClick = () => {
@@ -25,7 +25,7 @@ const Header = ({ black, setBlack }) => {
             {/* Logo */}
             <div className="logo  md:w-1/3">
               <img
-                src="/images/logo.webp"
+                src={`${black ? "/images/logo-dark.webp":"/images/logo.webp"}`}
                 alt=""
                 srcset=""
                 style={{ width: "150px", height: "35px" }}
@@ -34,7 +34,7 @@ const Header = ({ black, setBlack }) => {
 
             {/* Search bar  */}
             <div
-              class="form-group fg--search md:block hidden w-1/3 mx-4 px-8"
+              class="form-group fg--search md:block hidden w-1/3 mx-4 px-8 z-50"
               style={{
                 backgroundColor: "#e2e8f0",
                 outline: "none",
@@ -46,9 +46,9 @@ const Header = ({ black, setBlack }) => {
                 <i class="fa fa-search" style={{ color: "#718096" }}></i>
               </button>
               <input
-                onClick={()=> setDialogOpen(!dialogOpen)}
+                onClick={()=> setIsDialogOpen(!isDialogOpen)}
                 type="text"
-                className="w-full text-base h-10 px-4"
+                className="w-full text-base h-10 px-4 "
                 placeholder="Discover news, articles and more"
                 style={{
                   backgroundColor: "#e2e8f0",
@@ -281,8 +281,11 @@ const Header = ({ black, setBlack }) => {
 
 
         {/* Dialog box */}
-        <div className="dialog-box">
-          
+        <div className={`${isDialogOpen ? 'block':'hidden'} w-full h-full z-10 fixed top-0 left-0 bg-gray-500`}>
+            <div className="search-bar-description">
+              Helo from me 
+            </div>
+            <h1 onClick={()=> setIsDialogOpen(!isDialogOpen)}>X</h1>
         </div>
       </div>
     </>

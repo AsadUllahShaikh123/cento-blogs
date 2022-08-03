@@ -17,11 +17,11 @@ const CaseCard = ({index, category,articleHeading,author,date,read,image,black,s
           {
             image &&
           <div style={{margin:'8px 0 8px 8px'}}>
-          <div style={{ padding: "0px 8px", width: "117.90px", height: "170.75px" }}>
+          <div style={{ padding: "0px 8px", width: "120.90px", height: "159px" }}>
             <img
               src={image}
               alt=""
-              style={{ width: "117.90px", height: "170.75px", borderRadius: "8px" }}
+              style={{ width: "120.90px", height: "159px", borderRadius: "8px" }}
             />
           </div>
           </div>
@@ -47,6 +47,8 @@ const CaseCard = ({index, category,articleHeading,author,date,read,image,black,s
                 color: `${black ? 'rgb(237, 242, 247)':'rgb(45, 55, 72)'}`,
                 fontWeight: "600",
                 marginBottom: "8px",
+                maxHeight:'3em',
+                overflow:'hidden'
               }}
             >
               {articleHeading}

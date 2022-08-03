@@ -1,5 +1,6 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Contact = ({ black }) => {
   let icons = [
     {
@@ -15,6 +16,12 @@ const Contact = ({ black }) => {
       value: "New York, NY",
     },
   ];
+  useEffect(()=>{
+    AOS.init({
+      duration:750
+    })
+    AOS.refresh()
+  })
   return (
     <div
       className="contact min-h-screen w-full "
@@ -28,7 +35,7 @@ const Contact = ({ black }) => {
         style={{ marginTop: "32px", borderTop: "2px solid transparent" }}
       ></div>
 
-      <div className="contact-container mx-3 md:mx-36 flex justify-between py-8 md:py-16">
+      <div className="contact-container mx-3 md:mx-36 flex justify-between py-8 md:py-16" data-aos="fade-up" data-aos-delay="0">
         {/*  Connect and Form Section  */}
 
         <div className="connect-section md:w-4/6 w-full ">
@@ -261,28 +268,23 @@ const Contact = ({ black }) => {
             </p>
             <ul className="links-logo ">
               {icons.map((value) => (
-                <div className="flex border-2 items-center border-black">
+                <div className="flex  items-center ">
                   <button
                   className="contact-button"
                     style={{
                       width: "46px",
                       height: "46px",
                       borderRadius: "9999px",
-                      border:'2px solid black',
                       display:'flex',
                       justifyContent:'center',
                       alignItems:'center',
                       marginRight:'0.4rem',
-                      "&:hover":{
-                        backgroundColor:'blue'
-                      }
+                      
                     }}
                   >
                     <i
-                      className={`${value.icon} text-2xl icon  `}
-                      style={{                        
-                        color: `${black ? "rgb(113, 128, 150)" : "black"}`,
-                      }}
+                      className={`${value.icon} text-2xl icon ${black ? 'dark-icon':'light-icon'}`}
+                      
                     />
                   </button>
                   <p>{value.value}</p>

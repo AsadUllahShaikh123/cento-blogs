@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import data from "../data";
 import DetailContent from "./DetailContent";
 import RelatedBlogs from "./RelatedBlogs";
@@ -7,8 +9,12 @@ import RelatedBlogs from "./RelatedBlogs";
 
 const Blog = ({index,setBlogCategory,black}) => {
   
-  console.log(index,'BlogsIndex')
-  
+  useEffect(()=>{
+    AOS.init({
+      duration:750
+    })
+    AOS.refresh()
+  })  
   
   let filtered = [];
 
@@ -39,7 +45,7 @@ const Blog = ({index,setBlogCategory,black}) => {
           className="heading-margin-top"
           style={{ border: "2px solid transparent" }}
         ></div>
-        <div className="blogs-heading-container md:w-1140 w-full ml-auto mr-auto px-8">
+        <div className="blogs-heading-container md:w-1140 w-full ml-auto mr-auto px-8" data-aos="fade-down" data-aos-duration="0">
           <div className="blogs-heading">
             <h1
               style={{ color:`${black? 'rgb(237, 242, 247)':'rgb(45, 55, 72)'}` }}
@@ -75,7 +81,7 @@ const Blog = ({index,setBlogCategory,black}) => {
           className="margin-top"
           style={{ margin: "32px 0", border: "2px solid transparent" }}
         ></div>
-        <div className="blogs-details md:w-1140 w-full ml-auto mr-auto px-8 flex ">
+        <div className="blogs-details md:w-1140 w-full ml-auto mr-auto px-8 flex " data-aos="fade-up" data-aos-duration="0">
           <div className="blogs-detail-content md:w-2/3 w-full ">
             <div >
               <DetailContent image ={image} black={black} />
