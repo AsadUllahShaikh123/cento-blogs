@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/cento-blogs/static/css/main.f8ae3984.css",
+    "main.js": "/cento-blogs/static/js/main.54fac211.js",
+    "static/media/programmatic_outdoor.webp": "/cento-blogs/static/media/programmatic_outdoor.286d2b993aef68eb6269.webp",
+    "static/media/markdown.webp": "/cento-blogs/static/media/markdown.3925ce4c967665074bd6.webp",
+    "static/media/shopping.webp": "/cento-blogs/static/media/shopping.4564e12e1eb7c9640d21.webp",
+    "index.html": "/cento-blogs/index.html",
+    "main.f8ae3984.css.map": "/cento-blogs/static/css/main.f8ae3984.css.map",
+    "main.54fac211.js.map": "/cento-blogs/static/js/main.54fac211.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8ae3984.css",
+    "static/js/main.54fac211.js"
+  ]
+}
